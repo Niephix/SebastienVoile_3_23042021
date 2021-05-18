@@ -2,11 +2,15 @@
 <html lang=fr>
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_main.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/13299e9a17.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/13299e9a17.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
         <title>Ohmyfood</title>
     </head>
 
@@ -16,31 +20,31 @@
             <div class="logo__header"><a href="#"><img src="ohmyfood@2x.svg" alt="logo ohmyfood"/></a></div>
         </header>
         <!--Towns'choices'beginning-->
-        <section>
+        <section class="choices">
             <div class="choice-towns">
                 <div class="choice-towns__results">
                 <span class="choice-towns__icon"><i class="fas fa-map-marker-alt"></i></span>
-                <input type="search" id="ville" name="ville" placeholder="Paris, Belleville">
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <input type="search" id="ville" name="ville" placeholder="Paris, Belleville"/>
+                <h1 class="choices__heading">Réservez le menu qui vous convient</h1>
+                <p class="choices__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                 <button class="btn">Explorer nos restaurants</button>
             </div>
-            </div>
+        </div>
         </section>
-        <!--Towns' choices'ending-->
+        <!--Towns' choices'ending--->
 
         <!--Start's description site's functionnement-->
-        <section>
-            <h1>Fonctionnement</h1>
+        <section class="explain">
             <div class="functionnement">
-               <p class="functionnement__num">1</p>
-                <span class="functionnement__icon"><i class="fas fa-mobile-alt"></i></span>
+            <h1>Fonctionnement</h1>
+               <div class="functionnement__num">1</div>
+                <span class="functionnement__icontel"><i class="fas fa-mobile-alt"></i></span>
                 <button class="functionnement__btn">Choisissez un restaurant</button>
                 <p class="functionnement__num">2</p>
-                <span class="functionnement__icon"><i class="fas fa-list"></i></span>
+                <span class="functionnement__iconmenu"><i class="fas fa-list"></i></span>
                 <button class="functionnement__btn">Composer votre menu</button>
                 <p class="functionnement__num" >3</p>
-                <span class="functionnement__icon"><i class="fas fa-store"></i></span>
+                <span class="functionnement__iconrest"><i class="fas fa-store"></i></span>
                 <button class="functionnement__btn">Dégustez au restaurant</button>
             </div>
         </section>
