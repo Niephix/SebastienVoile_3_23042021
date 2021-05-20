@@ -31,75 +31,67 @@
             </div>
         </div>
         </section>
-        <!--Towns' choices'ending--->
+        <!--Towns' choices'ending-->
 
         <!--Start's description site's functionnement-->
         <section class="explain">
             <div class="functionnement">
-            <h1>Fonctionnement</h1>
-               <div class="functionnement__num">1</div>
-                <span class="functionnement__icontel"><i class="fas fa-mobile-alt"></i></span>
-                <button class="functionnement__btn">Choisissez un restaurant</button>
-                <p class="functionnement__num">2</p>
-                <span class="functionnement__iconmenu"><i class="fas fa-list"></i></span>
-                <button class="functionnement__btn">Composer votre menu</button>
-                <p class="functionnement__num" >3</p>
-                <span class="functionnement__iconrest"><i class="fas fa-store"></i></span>
-                <button class="functionnement__btn">Dégustez au restaurant</button>
+            <h1 class="explain__heading">Fonctionnement</h1>
+            <button class="functionnement__btn"><span class="functionnement__num">1</span><span class="functionnement__icon"><i class="fas fa-mobile-alt"></i></span> <strong>Choisissez un restaurant</strong></button>
+            <button class="functionnement__btn"><span class="functionnement__num">2</span><span class="functionnement__icon"><i class="fas fa-list-ul"></i></span><strong>Composez votre menu</strong></button>
+            <button class="functionnement__btn"><span class="functionnement__num">3</span><span class="functionnement__icon"><i class="fas fa-store"></i></span><strong>Dégustez au restaurant</strong></button>
             </div>
         </section>
         <!--End's description site's functionnement-->
 
         <!--Start's restaurants'presentations-->
-        <section>
-            <h1>Restaurants</h1>
+        <section class="describe">
             <div class="restnames">
+                <h1 class="describe__heading">Restaurants</h1>
                 <article class="restnames__article">
-                    <a href="menu_1palette_du_gout"><img src="images" alt="photo d'une assiette remplie" class="rest__picture"></a> <!--div si nécessaire-->
-                    <a href="menu_1palette_du_gout"><h2 class="restnames__heading">Palette du goût</h2></a>
-                    <span class="restnames__newrest">Nouveau</span><!--float ou position-->
+                    <a href="menu_1palette_du_gout"><img src="images/01_palette_du_gout.jpg" alt="photo d'une assiette remplie" class="rest__picture"></a> 
+                    <a href="menu_1palette_du_gout"><h2 class="restnames__heading">La palette du goût</h2></a>
+                    <span class="restnames__newrest">Nouveau</span>
                     <span class="restnames__hicon"><i class="far fa-heart"></i></span>
                     <!--<span class="restnames__hiconfull"><i class="far fa-heart"></i></span>-->
-                        <p>Ménilmontant</p>
+                        <p class="restnames__text">Ménilmontant</p>
                 </article>
 
                 <article class="restnames__article">
-                    <a href="menu_2note_enchantee"><img src="images" alt="photo d'une assiette remplie" class="rest__picture"></a> <!--div si nécessaire-->
+                    <a href="menu_2note_enchantee"><img src="images/02_note_enchantee.jpg" alt="photo d'une assiette remplie" class="rest__picture"></a> 
                     <a href="menu_2note_enchantee"><h2 class="restnames__heading">La note enchantée</h2></a>
                     <span class="restnames__newrest">Nouveau</span>
                     <span class="restnames__hicon"><i class="far fa-heart"></i></span>
                     <!--<span class="restnames__hiconfull"><i class="far fa-heart"></i></span>-->
-                        <p>Charonne</p>
+                        <p class="restnames__text">Charonne</p>
                 </article>
 
                 <article class="restnames__article">
-                    <a href="menu_3a_la_francaise"><img src="images" alt="photo d'une assiette remplie" class="rest__picture"></a> <!--div si nécessaire-->
+                    <a href="menu_3a_la_francaise"><img src="images/03_a_la_francaise.jpg" alt="photo d'une assiette remplie" class="rest__picture"></a> 
                     <a href="menu_3a_la_francaise"><h2 class="restnames__heading">À la française</h2></a>
                     <span class="restnames__hicon"><i class="far fa-heart"></i></span>
                     <!--<span class="restnames__hiconfull"><i class="far fa-heart"></i></span>-->
-                        <p>Cité Rouge</p>
+                        <p class="restnames__textbis">Cité Rouge</p>
                 </article>
 
                 <article class="restnames__article">
-                    <a href="menu_4_le_delice_des_sens"><img src="images" alt="photo d'une assiette remplie" class="rest__picture"></a> <!--div si nécessaire-->
+                    <a href="menu_4_le_delice_des_sens"><img src="images/04_le_delice_des_sens.jpg" alt="photo d'une assiette remplie" class="rest__picture"></a> 
                     <a href="menu_4_le_delice_des_sens"><h2 class="restnames__heading">Le délice des sens</h2></a>
                     <span class="restnames__hicon"><i class="far fa-heart"></i></span>
                    <!--<span class="restnames__hiconfull"><i class="far fa-heart"></i></span>--> 
-                        <p>Folie Méricourt</p>
+                        <p class="restnames__textbis">Folie Méricourt</p>
                 </article>
             </div>
         </section>
         <!--End's restaurants'presentations-->
 
         <footer>
-            <div class="logo__footer"><a href="#"><img src="ohmyfood@2x.svg" alt="logo ohmyfood"/></a></div>
+            <em class="logo__footer"><a class="logo__footer__heading" href="#">ohmyfood</a></em>
             <ul> <!--A voir CSS envisager div-->
-            <li class="footer__resticon"><i class="fas fa-utensils"></i></li>
-            <li><a href="#">Proposer un restaurant</a></li>
-            <li class="footer__partnericon"><i class="fas fa-hands-helping"></i></li>
-            <li><a href="#">Devenir partenaire</a></li>
-            <li>  <a href="#">Mentions légales</a></li>
-            <li class="footer__contact"><a href="mailto:#">Contact</a></li>
+            <li><em class="logo__footer__icon"><i class="fas fa-utensils"></i></em><a class="footer__list" href="#">Proposer un restaurant</a></li>
+            <li><em class="logo__footer__icon"><i class="fas fa-hands-helping"></i></em><a class="footer__list" href="#">Devenir partenaire</a></li>
+            <li><a class="footer__list" href="#">Mentions légales</a></li>
+            <li class="footer__contact"><a class="footer__list" href="mailto:#">Contact</a></li>
         </ul>   
         </footer>
     </div>
