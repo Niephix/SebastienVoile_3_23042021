@@ -1,0 +1,48 @@
+@mixin footer{
+    padding: 2em 0;
+    width: auto;
+}
+    $color-bgfooter: black; 
+    footer{
+    @include footer;
+    background-color: $color-bgfooter;
+}
+
+footer, .logo__footer, .logo__footer__heading, .footer__list{
+    color: white;
+}
+@mixin footerul{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: column;
+    list-style: none;
+}
+
+footer ul{
+    @include footerul;
+}
+
+@mixin footerli{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 0.5em -1.25em;
+}
+
+footer li{
+   @include footerli;
+}
+
+.logo__footer{
+    font-size: 16px;
+    padding-left: 1.25em;
+}
+
+.logo__footer__icon{
+    padding-right: 0.5em;
+}
+
+.logo__footer__heading{
+    font-family: 'Shrikhand', cursive;
+}

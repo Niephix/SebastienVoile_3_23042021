@@ -1,0 +1,23 @@
+/*Mixin golbal presentation*/
+@mixin footer{
+    padding: 2em 0;
+    width: auto;
+}
+
+/*Mixin footer ul*/
+@mixin footerul{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: column;
+    list-style: none;
+}
+
+/*Mixin footerli*/
+@mixin footerli{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 0.5em -1.25em;
+}
+    

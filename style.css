@@ -1,8 +1,16 @@
-@charset "UTF-8";
+/*
+@import "_variables";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./base/fonts";
+@import "./components/btns"; 
+@import "./layouts/footer";
+@import "./layouts/logoheader";
+@import "./layouts/inputtowns";
+@import "./pages/generalities";
+*/
 body {
   margin: 0;
-  /*font-family: 'Roboto', sans-serif;
-  font-family: 'Shrikhand', cursive;*/
 }
 
 #main {
@@ -220,6 +228,10 @@ input {
   float: right;
   margin: -1em 2em 0 2em;
 }
+.restnames__hicon:hover {
+  background-color: #ff79da;
+  cursor: pointer;
+}
 
 a {
   text-decoration: none;
@@ -234,7 +246,6 @@ a {
 }
 
 /*End's restaurants'presentations*/
-/*Mixin de présentation générale*/
 footer {
   padding: 2em 0;
   width: auto;
