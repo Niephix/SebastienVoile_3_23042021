@@ -1,0 +1,287 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  /*font-family: 'Roboto', sans-serif;
+  font-family: 'Shrikhand', cursive;*/
+}
+
+#main {
+  overflow: hidden;
+}
+
+.logo__header {
+  text-align: center;
+  padding: 1em 0;
+}
+
+/*Towns'choices'beginning*/
+.choice-towns {
+  padding-bottom: 3.5em;
+  background-color: #f0f1f3;
+}
+
+.choice-towns__icon {
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  top: 80px;
+}
+
+input {
+  width: 100%;
+  background-color: #d7e0e9;
+  padding: 1em 0;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  border: none;
+  -webkit-box-shadow: 3px 3px 10px #d7e0e9;
+          box-shadow: 3px 3px 10px #d7e0e9;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+  text-align: center;
+}
+
+::-moz-placeholder {
+  color: black;
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  color: black;
+  text-align: center;
+}
+
+::-ms-input-placeholder {
+  color: black;
+  text-align: center;
+}
+
+::placeholder {
+  color: black;
+  text-align: center;
+}
+
+.choices__heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.choices__heading, .choices__text, .functionnement__btn, .restnames__heading, .restnames__text, .restnames__textbis, footer li {
+  font-family: "Roboto", sans-serif;
+}
+
+.choices__text {
+  text-align: center;
+  font-size: 20px;
+}
+
+.btn {
+  position: relative;
+  left: 21%;
+  right: 25%;
+  text-align: center;
+  padding: 1em 2.3em;
+  border-radius: 2em;
+  border: none;
+  -webkit-box-shadow: 3px 3px 8px #9356dc;
+          box-shadow: 3px 3px 8px #9356dc;
+  background-color: #ff79da;
+  color: white;
+  cursor: pointer;
+}
+
+/*Towns' choices'ending*/
+/*Start's description site's functionnement*/
+.functionnement {
+  padding: 0 1.25em;
+  margin-bottom: 2em;
+}
+
+.functionnement__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.functionnement__btn {
+  margin: 1.5em 0;
+  padding: 1em;
+  border-radius: 2em 2em;
+  width: 100%;
+  border: none;
+  -webkit-box-shadow: 8px 8px 10px #f2f2f2;
+          box-shadow: 8px 8px 10px #f2f2f2;
+  font-size: 18px;
+}
+.functionnement__btn:hover {
+  background-color: #9356dc;
+}
+
+.functionnement__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 0.7em 0 -1.7em;
+  border-radius: 100%;
+  background-color: #9356dc;
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  color: white;
+  font-size: 14px;
+}
+
+.functionnement__icon {
+  margin: 0 1em;
+  font-weight: bold;
+  color: gray;
+}
+.functionnement__icon:hover {
+  color: #9356dc;
+}
+
+/*End's description site's functionnement*/
+/*Start's restaurants'presentations*/
+.restnames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.restnames {
+  padding: 3em 0 3em 0;
+  background-color: #f0f1f3;
+}
+
+.restnames__article {
+  width: 330px;
+  height: 250px;
+  margin-bottom: 1.5em;
+  background-color: white;
+  border-radius: 3em;
+  border: none;
+}
+
+.rest__picture {
+  width: 100%;
+  height: 65%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 3em 3em 0 0;
+}
+
+.restnames__heading {
+  font-size: 20px;
+  color: black;
+  margin: 0.5em 0 0 0.5em;
+}
+
+.restnames__newrest {
+  display: inline-block;
+  border: none;
+  background-color: #99e2d0;
+  color: #089672;
+  font-weight: bold;
+  padding: 0.3em;
+  position: relative;
+  top: -190px;
+  left: 230px;
+  margin: 0;
+}
+
+.restnames__hicon {
+  float: right;
+  margin: -1em 2em 0 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.restnames__text {
+  margin: -1.5em auto auto 0.7em;
+}
+
+.restnames__textbis {
+  margin: 0.4em 2em 0 0.7em;
+}
+
+/*End's restaurants'presentations*/
+/*Mixin de présentation générale*/
+footer {
+  padding: 2em 0;
+  width: auto;
+  background-color: black;
+}
+
+footer, .logo__footer, .logo__footer__heading, .footer__list {
+  color: white;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  list-style: none;
+}
+
+footer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0.5em -1.25em;
+}
+
+.logo__footer {
+  font-size: 16px;
+  padding-left: 1.25em;
+}
+
+.logo__footer__icon {
+  padding-right: 0.5em;
+}
+
+.logo__footer__heading {
+  font-family: "Shrikhand", cursive;
+}/*# sourceMappingURL=style.css.map */
