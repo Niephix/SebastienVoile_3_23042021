@@ -15,10 +15,6 @@
     
     /*Towns'choices'beginning*/
     .choice-towns{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
         padding-bottom: 3.5em;
         background-color: #f0f1f3;
     }
