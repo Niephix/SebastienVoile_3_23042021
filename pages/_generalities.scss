@@ -6,29 +6,17 @@ body{
     overflow: hidden;
 }
 
-$color-primary: #9356dc;
-    $color-secondary: #ff79da;
-    $color-tertiary:#99e2d0;
-    $color-bgrestname: #f0f1f3;
-    $color-bgarticle: white;
-    $color-bgnewrest: #99e2d0;
-    $color-textnew: #089672;
-    $color-functionnement__btn : #f2f2f2;
-    $color-text: black;
-
-    /*Start's description site's functionnement*/
+.choices__text{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1.8em;
+    margin-top: 0;
+}
     .functionnement{
         padding: 0 1.25em;
         margin-bottom: 2em;
     }
-
-    %flexstart{
-        display: flex;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: center;
-    }
-
+    
     .functionnement__num{
         display: flex;
         justify-content: flex-start;
@@ -37,7 +25,7 @@ $color-primary: #9356dc;
         background-color: $color-primary;
         padding: 0.5em 0.8em 0.5em 0.8em;
         color: $color-bgarticle; 
-        font-size: 14px;   
+        font-size: 14px; 
     }
     
     .functionnement__icon{
@@ -48,44 +36,29 @@ $color-primary: #9356dc;
             color: $color-primary;
         }
     }
-    /*End's description site's functionnement*/
 
-    /*Start's restaurants'presentations*/
-    %flex-spaceevenly{
+    .restnames__article{
+        @include cards;
+    }
+    
+    .rest__picture{
+        @include picturescards;
+    }
+    
+    .restnames{
         display: flex;
         flex-flow: column wrap;
         justify-content: space-evenly;
         align-content: center;
         box-sizing: content-box;
-    }
-
-    .restnames{
         padding: 3em 0 3em 0;
         background-color: $color-bgrestname;  
-        @extend %flex-spaceevenly;
-    }
-    
-    .restnames__article{
-        width: 330px;
-        height: 250px;
-        margin-bottom: 1.5em;
-        background-color: white;
-        border-radius: 3em;
-        border:none;
-    }
-    
-    .rest__picture{
-        width:100%;
-        height: 65%;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 3em 3em 0 0;
     }
     
     .restnames__heading{
         font-size: 20px;
         color: black;
-        margin: 0.5em 0 0 0.5em;
+        margin: 1em 0 0 1.2em;
     }
     
     .restnames__newrest{
@@ -103,7 +76,7 @@ $color-primary: #9356dc;
     
     .restnames__hicon{
         float: right;
-        margin: -1em 2em 0 2em;
+        margin: -1em 2em 0 auto;
         &:hover{
             background-color: $color-secondary;
             cursor: pointer;
@@ -115,10 +88,9 @@ $color-primary: #9356dc;
     }
     
     .restnames__text{
-        margin: -1.5em auto auto 0.7em;
+        margin: -1.5em auto auto 1.4em;
     }
     
     .restnames__textbis{
-        margin: 0.4em 2em 0 0.7em;
+        margin: 0.4em 2em 0 1.5em;
     }
-    /*End's restaurants'presentations*/

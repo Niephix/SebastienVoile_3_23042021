@@ -1,5 +1,4 @@
-$color-primary: #9356dc;
- $color-secondary: #ff79da;
+
 .btn{
     position: relative;
     left: 21%;
@@ -15,6 +14,10 @@ $color-primary: #9356dc;
 }
 
 .functionnement__btn{
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
     margin: 1.5em 0; 
     padding: 1em;
     border-radius: 2em 2em;
@@ -25,5 +28,4 @@ $color-primary: #9356dc;
     &:hover{
         background-color: $color-primary;
     }
-    @extend %flexstart;
 }

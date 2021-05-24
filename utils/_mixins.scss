@@ -1,23 +1,17 @@
-/*Mixin golbal presentation*/
-@mixin footer{
-    padding: 2em 0;
-    width: auto;
+@mixin cards {
+    width: 330px;
+    height: 250px;
+    margin-bottom: 1.5em;
+    background-color: white;
+    border-radius: 3em;
+    border:none;
 }
 
-/*Mixin footer ul*/
-@mixin footerul{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    flex-flow: column;
-    list-style: none;
-}
-
-/*Mixin footerli*/
-@mixin footerli{
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    margin: 0.5em -1.25em;
+@mixin picturescards {
+    width:100%;
+    height: 65%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3em 3em 0 0;   
 }
     
