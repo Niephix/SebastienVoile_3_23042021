@@ -75,6 +75,10 @@ body{
         @include rest__hicon;
     }
 
+    .restnames__hiconfull{
+        @include rest__hiconfull;
+    }
+
     a{
         text-decoration: none;
     }

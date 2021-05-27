@@ -107,18 +107,32 @@ body {
   float: right;
   margin: -1em 1em 0 auto;
   font-size: 25px;
-  opacity: 0.6;
   text-align: center;
 }
 .restnames__hicon:hover {
-  /*color: white;
-  background-image: radial-gradient(circle at 50%, $color-primary, $color-secondary);
-  border-radius: 50%;
-  animation-fill-mode: forwards;
-  transform: scale(1.2);
-  transition: all 280ms ease-in-out;
-  overflow: hidden;*/
   opacity: 0;
+}
+
+.restnames__hiconfull {
+  float: right;
+  margin: -1em;
+  display: block;
+  font-size: 25px;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  border-radius: 100%;
+}
+.restnames__hiconfull:hover {
+  opacity: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 a {
