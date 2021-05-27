@@ -45,9 +45,6 @@ body {
   font-weight: bold;
   color: gray;
 }
-.functionnement__icon:hover {
-  color: #9356dc;
-}
 
 .restnames__article {
   width: 330px;
@@ -108,11 +105,20 @@ body {
 
 .restnames__hicon {
   float: right;
-  margin: -1em 2em 0 auto;
+  margin: -1em 1em 0 auto;
+  font-size: 25px;
+  opacity: 0.6;
+  text-align: center;
 }
 .restnames__hicon:hover {
-  background-color: #ff79da;
-  cursor: pointer;
+  /*color: white;
+  background-image: radial-gradient(circle at 50%, $color-primary, $color-secondary);
+  border-radius: 50%;
+  animation-fill-mode: forwards;
+  transform: scale(1.2);
+  transition: all 280ms ease-in-out;
+  overflow: hidden;*/
+  opacity: 0;
 }
 
 a {
@@ -120,7 +126,7 @@ a {
 }
 
 .restnames__text {
-  margin: -1.5em auto auto 1.4em;
+  margin: -1.5em auto auto 1.5em;
 }
 
 .restnames__textbis {
@@ -141,7 +147,8 @@ a {
   border: none;
   -webkit-box-shadow: 3px 3px 8px #9356dc;
           box-shadow: 3px 3px 8px #9356dc;
-  background-color: #ff79da;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(to top left, #9356dc, #ff79da);
   color: white;
   cursor: pointer;
 }
@@ -169,6 +176,13 @@ a {
 }
 .functionnement__btn:hover {
   background-color: #9356dc;
+  background: #e4d5f6;
+  z-index: -1;
+  -webkit-transition: opacity 270ms;
+  transition: opacity 270ms;
+}
+.functionnement__btn:hover .functionnement__icon--hover:hover {
+  color: #9356dc;
 }
 
 footer {
