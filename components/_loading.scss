@@ -1,0 +1,43 @@
+.loading__content{
+    height: 100%;
+    width: 100%;
+    background: no-repeat;
+    background-color: $color-bgrestname;
+    background-position: center;
+    background-size: cover;
+    /*visibility: hidden;*/
+    .loading__spinner{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        width: 100%;
+        .loading__spinner__utensils{
+            font-size: 50px;
+            position: relative;
+            top: 0;
+            right: 0;
+            left: 30%;
+            color: $color-primary;
+        }
+        .loading__spinner__logo{
+            font-size: 50px;
+            color: $color-secondary;     
+        }
+    }
+    @keyframes loading__spinner{
+
+        0%{
+            transform: scale(100%);
+
+        }
+    }
+}
+
+
+
+
+
+
+
