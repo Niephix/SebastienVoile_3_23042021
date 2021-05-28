@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
 }
 
 #main{
@@ -12,28 +13,30 @@ body{
     margin-bottom: 1.8em;
     margin-top: 0;
 }
-    .functionnement{
-        padding: 0 1.25em;
-        margin-bottom: 2em;
-    }
-    
-    .functionnement__num{
-        display: flex;
-        justify-content: flex-start;
-        margin: 0 0.7em 0 -1.7em;
-        border-radius: 100%;
-        background-color: $color-primary;
-        padding: 0.5em 0.8em 0.5em 0.8em;
-        color: $color-bgarticle; 
-        font-size: 14px; 
-    }
-    
-    .functionnement__icon{
-        margin: 0 1em;
-        font-weight: bold;
-        color: gray;
-    }
 
+.functionnement{
+    padding: 0 1.25em;
+    margin-bottom: 2em;
+}
+
+.functionnement__num{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0.7em 0 -1.7em;
+    border-radius: 100%;
+    background-color: $color-primary;
+    padding: 0.5em 0.8em 0.5em 0.8em;
+    color: $color-bgarticle; 
+    font-size: 14px; 
+}
+
+.functionnement__icon{
+    margin: 0 1em;
+    font-weight: bold;
+    color: gray;
+}
+
+    
     .restnames__article{
         @include cards;
     }
