@@ -1,49 +1,78 @@
 .loading__content{
         position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        display: block;
+        z-index: -6;
+        height: 100%;
+        width: 100%;
+        /*animation: ;*/
+        
+        .loading__spinner{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
         background: no-repeat;
         background-color: $color-bgrestname;
         background-position: center;
         background-size: cover;
-        z-index: 9999;
-        opacity: 0;
         height: 100%;
         width: 100%;
-        .loading__spinner{
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-content: center;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: no-repeat;
-            background-color: $color-bgrestname;
-            background-position: center;
-            background-size: cover;
-            z-index: 9999;
-            height: 100%;
-            width: 100%;
-            animation-duration: 10s;
+        }
+                   
         .loading__spinner__utensils{
+            width: auto;
             font-size: 50px;
-            position: relative;
-            top: 0;
+            position: absolute;
+            top: 35%;
             right: 0;
-            left: 30%;
+            left: 45%;
             color: $color-primary;
+            animation: rotation__utensils 3s ease-in-out both infinite alternate;
+              }
+          @keyframes rotation__utensils{
+              0%{
+              transform: rotate3d(0);
+              }
+  
+              50%{
+              transform: rotate3d(1, 1, 1, 180deg);
+              color: #ff79da;
+              }
+    
+            100%{
+            transform: rotate3d(1, 1, 1, 360deg);
+            font-size: 60px;
+              }
             }
-        .loading__spinner__logo{
-        font-size: 50px;
-        color: $color-secondary;     
+              
+          .loading__spinner__logo{
+          width: auto;
+          position: absolute;
+          font-size: 50px;
+          color: $color-secondary;
+          animation: logo__spinner 3s ease-in-out infinite alternate;
+          }
+          @keyframes logo__spinner{
+            0%{
+            transform: 0;
+            }
+  
+            50%{
+            transform-origin: center;
+            color: #9356dc;
+            letter-spacing: .25em;
+            }
+  
+          100%{
+            transform-origin: 0;
+            }
+          }
         }
-        }
-    }
+        
+        
+        
+      
+       
 
 
 
