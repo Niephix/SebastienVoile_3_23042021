@@ -25,8 +25,7 @@
     border: none;
     box-shadow: 8px 8px 10px $color-functionnement__btn;
     font-size: 18px;
-}  
-    .functionnement__btn:hover{
-        /*background-color: $color-primary;*/
+    &.functionnement__btn:hover{
         background: lighten($color-primary, $amount: 30);
     }
+}  

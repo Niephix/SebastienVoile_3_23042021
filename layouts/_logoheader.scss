@@ -1,4 +1,5 @@
 .logo__header{
-    text-align: center;
+    @extend %flex_center_row_wrap;
+    
     padding: 1em 0;
 }

@@ -2,36 +2,39 @@ footer{
     background-color: black;
     padding: 2em 0;
     width: auto;
+    
+    footer, .logo__footer, .logo__footer__heading, .footer__list{
+        color: white;
+    }
+    
+    .logo__footer{
+        font-size: 16px;
+        padding-left: 1.25em;
+    }
+    
+    .logo__footer__heading{
+        font-family: 'Shrikhand', cursive;
+    }
+    
+    footer ul{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-flow: column;
+        list-style: none;
+    }
+    
+    footer li{
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        margin: 0.5em -1.25em;
+    }
+    
+    .logo__footer__icon{
+        padding-right: 0.5em;
+        color: white;
+    }
 }
 
-footer, .logo__footer, .logo__footer__heading, .footer__list{
-    color: white;
-}
 
-.logo__footer{
-    font-size: 16px;
-    padding-left: 1.25em;
-}
-
-.logo__footer__heading{
-    font-family: 'Shrikhand', cursive;
-}
-
-footer ul{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    flex-flow: column;
-    list-style: none;
-}
-
-footer li{
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    margin: 0.5em -1.25em;
-}
-
-.logo__footer__icon{
-    padding-right: 0.5em;
-}

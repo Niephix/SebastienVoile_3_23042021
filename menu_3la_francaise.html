@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang=fr>
     <head>
-        <meta charset="utf-8" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/13299e9a17.js" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,18 +15,19 @@
         <body>
     <div id="main">
         <header>
-            <span class="header_arrowback"><i class="fas fa-arrow-left"></i></span>
+            <span class="header_arrowback"><a href="index.html"><i class="fas fa-arrow-left"></i></a></span>
             <div class="logo__header"><a href="index.html"><img src="ohmyfood@2x.svg" alt="logo ohmyfood"/></a></div>
         </header>
 
         <div class="bg-imagemenu">
-            <img src="images" alt="photo d'une assiette remplie" class="rest__picture">
+            <img src="images/03_a_la_francaise.jpg" alt="photo d'une assiette remplie" class="picture__menu">
         </div>
 
         <!--Menu's presentation start-->
         <section>
             <div class="restmenu">
-                <h1 class="restmenu__mainheading">À la Française <i class="far fa-heart"></i></h1>
+                <h1 class="restmenu__mainheading">À la Française <span class="restnames__hicon"><i class="far fa-heart"></i></span>
+                    <span class="restnames__hiconfull"><i class="fas fa-heart"></i></span></h1>
                  <!--Starters-->
                     <h2 class="restemnu__title">ENTRÉES</h2>
                     <article class="restemenu__starters">
@@ -86,21 +89,20 @@
                        </article>
             <!--Menu's presentation end-->
                        
-                    <button class="restemenu__command">Commander</button>
+            <button class="btn btn--command">Commander</button>
 
                 </div>
             </section>
-
-                <footer><div class="logo__footer"><a href="#"><img src="ohmyfood@2x.svg" alt="logo ohmyfood"/></a></div>
-                    <ul> <!--A voir CSS envisager div-->
-                    <li class="footer__resticon"><i class="fas fa-utensils"></i></li>
-                    <li><a href="#">Proposer un restaurant</a></li>
-                    <li class="footer__partnericon"><i class="fas fa-hands-helping"></i></li>
-                    <li><a href="#">Devenir partenaire</a></li>
-                    <li>  <a href="#">Mentions légales</a></li>
-                    <li class="footer__contact"><a href="mailto:#">Contact</a></li>
-                </ul>   
-            </footer>  
+            
+            <footer>
+                <em class="logo__footer"><a class="logo__footer__heading" href="#">ohmyfood</a></em>
+                <ul>
+                <li><em class="logo__footer__icon"><i class="fas fa-utensils"></i></em><a class="footer__list" href="#">Proposer un restaurant</a></li>
+                <li><em class="logo__footer__icon"><i class="fas fa-hands-helping"></i></em><a class="footer__list" href="#">Devenir partenaire</a></li>
+                <li><a class="footer__list" href="#">Mentions légales</a></li>
+                <li class="footer__contact"><a class="footer__list" href="mailto:#">Contact</a></li>
+            </ul>   
+            </footer>       
     </div>
 </body>
 </html>
