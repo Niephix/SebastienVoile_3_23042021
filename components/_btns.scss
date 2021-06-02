@@ -13,19 +13,29 @@
     cursor: pointer;
 }
 
+.btn--command{
+    position: relative;
+    top: 35px;
+    left: 25%;
+    bottom: 25px;
+    right: 25%;
+    width: 50%;
+}
+
 .functionnement__btn{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-content: center;
     align-items: center;
-    margin: 1.5em 0; 
+    margin: 1em 0; 
     padding: 1em;
     border-radius: 2em 2em;
     width: 100%;
     border: none;
-    box-shadow: 8px 8px 10px $color-functionnement__btn;
+    box-shadow: 6px 6px 10px $color-functionnement__btn;
     font-size: 18px;
     &.functionnement__btn:hover{
         background: lighten($color-primary, $amount: 30);
     }
-}  
+}
+

@@ -1,4 +1,4 @@
-/*First placholder center column without box-sizing*/
+
 %flex_center_column{
     display: flex;
     flex-flow: column wrap;
@@ -6,16 +6,13 @@
     align-items: center;    
 }
 
-/*Second placeholder space-evenly with box-sizing*/
 %flex_spaceevenly{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-content: center;
-    box-sizing: content-box;
 }
 
-/*Third placeholder flex-start and align-items*/
 %flexstart{
     display: flex;
     justify-content: flex-start;
@@ -23,7 +20,6 @@
     align-items: center;
 }
 
-/*fourth placeholder flex-start without align-items*/
 %flex_startbis{
     display: flex;
     justify-content: flex-start;
@@ -33,9 +29,15 @@
 %flex_center_row_wrap{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
     align-items: center;
-    flex: 1em;
 }
     
+%flex_spaceevenly_bs{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    box-sizing: content-box;
+}

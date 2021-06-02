@@ -3,20 +3,7 @@ footer{
     padding: 2em 0;
     width: auto;
     
-    footer, .logo__footer, .logo__footer__heading, .footer__list{
-        color: white;
-    }
-    
-    .logo__footer{
-        font-size: 16px;
-        padding-left: 1.25em;
-    }
-    
-    .logo__footer__heading{
-        font-family: 'Shrikhand', cursive;
-    }
-    
-    footer ul{
+    ul{
         display: flex;
         justify-content: space-between;
         align-content: center;
@@ -24,17 +11,32 @@ footer{
         list-style: none;
     }
     
-    footer li{
-        display: flex;
-        justify-content: flex-start;
-        align-content: center;
-        margin: 0.5em -1.25em;
-    }
-    
-    .logo__footer__icon{
-        padding-right: 0.5em;
-        color: white;
+    li{
+        margin: 0.5em -1.2em;
     }
 }
+
+footer, .logo__footer, .logo__footer__heading, .footer__list{
+    color: white;
+}
+
+.logo__footer__heading{
+        font-family: 'Shrikhand', cursive; 
+        font-size: 16px;
+        padding-left: 1em; 
+    }
+
+    .logo__footer__collaborate{
+        padding-right: .86em;
+    }
+
+    .logo__footer__partners{
+        padding-right: .5em;
+    }
+
+    
+
+
+
 
 

@@ -1,9 +1,39 @@
 /*Mains colors*/
 /*Backgrounds'colors*/
 /*texts, buttons'colors*/
-/*First placholder center column without box-sizing*/
-/*Second placeholder space-evenly with box-sizing*/
 .restmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.logo__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restnames {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,29 +50,6 @@
           box-sizing: content-box;
 }
 
-/*Third placeholder flex-start and align-items*/
-/*fourth placeholder flex-start without align-items*/
-.logo__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1em;
-      -ms-flex: 1em;
-          flex: 1em;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -50,6 +57,13 @@ body {
 
 #main {
   overflow: hidden;
+}
+
+.header__arrowback {
+  margin-right: 0.5em;
+}
+.header__arrowback .fas {
+  color: black;
 }
 
 .choices__text {
@@ -105,29 +119,17 @@ body {
 }
 
 .restnames {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
   padding: 3em 0 3em 0;
   background-color: #f0f1f3;
 }
-.restnames .restnames__heading {
+
+.restnames__heading {
   font-size: 20px;
   color: black;
   margin: 1em 0 0 1.2em;
 }
-.restnames .restnames__newrest {
+
+.restnames__newrest {
   display: inline-block;
   border: none;
   background-color: #99e2d0;
@@ -139,31 +141,15 @@ body {
   left: 230px;
   margin: 0;
 }
-.restnames .restnames__text {
+
+.restnames__text {
   margin: -1.5em auto auto 1.5em;
 }
-.restnames .restnames__textbis {
+
+.restnames__textbis {
   margin: 0.4em 2em 0 1.5em;
 }
 
-/*.restnames__heading{
-    font-size: 20px;
-    color: black;
-    margin: 1em 0 0 1.2em;
-}
-
-.restnames__newrest{
-    display: inline-block;
-    border:none;
-    background-color: $color-bgnewrest;
-    color: $color-textnew;
-    font-weight: bold;
-    padding: 0.3em;
-    position: relative;
-    top: -190px;
-    left: 230px;
-    margin: 0;
-}*/
 .restnames__hicon {
   float: right;
   margin: -1em 1em 0 auto;
@@ -210,28 +196,82 @@ a {
   text-decoration: none;
 }
 
-/*.restnames__text{
-    margin: -1.5em auto auto 1.5em;
+.restmenu {
+  position: relative;
+  top: -2em;
+  /*margin-top: -3em;*/
+  padding: 1.8em 1.2em;
+  border-radius: 40px 40px 0 0;
+  background-color: #f0f1f3;
+  z-index: 6;
 }
 
-.restnames__textbis{
-    margin: 0.4em 2em 0 1.5em;
-}*/
+.restmenu__mainheading {
+  margin: 0;
+}
+
+.restemenu__desc {
+  margin: 0.5em 0 0.5em 0.8em;
+}
+
+.restmenu__text {
+  width: 250px;
+  margin: 0.5em auto 1em 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.restemnu__title {
+  margin: 1.5em 0 0.5em 0;
+}
+
+.restemnu__title__underline {
+  background-color: #99e2d0;
+  padding: 0.2em 0;
+  border-radius: 20px;
+  width: 15%;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  margin: -2em 1em 0.5em 1em;
+}
+
 .picture__menu {
   width: 100%;
   height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-size: cover;
 }
 
-.header__arrowback {
-  margin-right: 1.5em;
+.restmenu__dishes {
+  width: 100%;
+  margin: 1em 0;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  -webkit-box-shadow: 3px 3px 6px gray;
+          box-shadow: 3px 3px 6px gray;
 }
-.header__arrowback .fas {
-  color: black;
+.restmenu__dishes .restemenu__check {
+  position: relative;
+  top: -2em;
+  right: 0;
+  left: 90%;
+  opacity: 1;
 }
 
-.choices__heading, .choices__text, .functionnement__btn, .describe__heading, .explain__heading, .restnames__heading, .restnames__text, .restnames__textbis, .restnames__newrest, .restemnu__title, .restemenu__desc, .restemenu__text, footer li {
+.choices__heading, .choices__text, .functionnement__btn, .describe__heading, .explain__heading, .restnames__heading, .restnames__text, .restnames__textbis, .restnames__newrest, .restemnu__title, .restemenu__desc, .restmenu__text, footer li {
   font-family: "Roboto", sans-serif;
 }
 
@@ -255,25 +295,34 @@ a {
   cursor: pointer;
 }
 
+.btn--command {
+  position: relative;
+  top: 35px;
+  left: 25%;
+  bottom: 25px;
+  right: 25%;
+  width: 50%;
+}
+
 .functionnement__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1.5em 0;
+  margin: 1em 0;
   padding: 1em;
   border-radius: 2em 2em;
   width: 100%;
   border: none;
-  -webkit-box-shadow: 8px 8px 10px #f2f2f2;
-          box-shadow: 8px 8px 10px #f2f2f2;
+  -webkit-box-shadow: 6px 6px 10px #f2f2f2;
+          box-shadow: 6px 6px 10px #f2f2f2;
   font-size: 18px;
 }
 .functionnement__btn.functionnement__btn:hover {
@@ -287,8 +336,8 @@ a {
   opacity: 0;*/
   height: 100%;
   width: 100%;
-  -webkit-animation: loading__charging 15s ease-in-out both 1 normal;
-          animation: loading__charging 15s ease-in-out both 1 normal;
+  -webkit-animation: loading__charging 10s ease-in-out both 1 normal;
+          animation: loading__charging 10s ease-in-out both 1 normal;
 }
 .loading__content .loading__spinner {
   display: -webkit-box;
@@ -425,17 +474,7 @@ footer {
   padding: 2em 0;
   width: auto;
 }
-footer footer, footer .logo__footer, footer .logo__footer__heading, footer .footer__list {
-  color: white;
-}
-footer .logo__footer {
-  font-size: 16px;
-  padding-left: 1.25em;
-}
-footer .logo__footer__heading {
-  font-family: "Shrikhand", cursive;
-}
-footer footer ul {
+footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,20 +489,26 @@ footer footer ul {
           flex-flow: column;
   list-style: none;
 }
-footer footer li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin: 0.5em -1.25em;
+footer li {
+  margin: 0.5em -1.2em;
 }
-footer .logo__footer__icon {
-  padding-right: 0.5em;
+
+footer, .logo__footer, .logo__footer__heading, .footer__list {
   color: white;
+}
+
+.logo__footer__heading {
+  font-family: "Shrikhand", cursive;
+  font-size: 16px;
+  padding-left: 1em;
+}
+
+.logo__footer__collaborate {
+  padding-right: 0.86em;
+}
+
+.logo__footer__partners {
+  padding-right: 0.5em;
 }
 
 .logo__header {

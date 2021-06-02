@@ -7,6 +7,13 @@ body{
     overflow: hidden;
 }
 
+.header__arrowback{
+    margin-right: 0.5em;
+    & .fas{
+        color: black;
+    }
+}
+
 .choices__text{
     font-size: 20px;
     text-align: center;
@@ -45,48 +52,17 @@ body{
     }
     
     .restnames{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-evenly;
-        align-content: center;
-        box-sizing: content-box;
+        @extend %flex_spaceevenly_bs;
         padding: 3em 0 3em 0;
         background-color: $color-bgrestname; 
-
-        .restnames__heading{
-            font-size: 20px;
-            color: black;
-            margin: 1em 0 0 1.2em;
-        }
-        
-        .restnames__newrest{
-            display: inline-block;
-            border:none;
-            background-color: $color-bgnewrest;
-            color: $color-textnew;
-            font-weight: bold;
-            padding: 0.3em;
-            position: relative;
-            top: -190px;
-            left: 230px;
-            margin: 0;
-        }
-
-        .restnames__text{
-            margin: -1.5em auto auto 1.5em;
-        }
-        
-        .restnames__textbis{
-            margin: 0.4em 2em 0 1.5em;
-        }
     }
-    
-    /*.restnames__heading{
+
+    .restnames__heading{
         font-size: 20px;
         color: black;
         margin: 1em 0 0 1.2em;
     }
-    
+
     .restnames__newrest{
         display: inline-block;
         border:none;
@@ -98,8 +74,16 @@ body{
         top: -190px;
         left: 230px;
         margin: 0;
-    }*/
-    
+    }
+
+    .restnames__text{
+        margin: -1.5em auto auto 1.5em;
+    }
+
+    .restnames__textbis{
+        margin: 0.4em 2em 0 1.5em;
+    }
+       
     .restnames__hicon{
         @include rest__hicon;
     }
@@ -122,27 +106,67 @@ body{
         text-decoration: none;
     }
     
-    /*.restnames__text{
-        margin: -1.5em auto auto 1.5em;
-    }
-    
-    .restnames__textbis{
-        margin: 0.4em 2em 0 1.5em;
-    }*/
-
     .restmenu{
        @extend %flex_spaceevenly;
+       position: relative;
+       top: -2em;
+       /*margin-top: -3em;*/
+       padding: 1.8em 1.2em ;
+       border-radius: 40px 40px 0 0;
+       background-color: $color-bgrestname;
+       z-index: 6;
+    }
+
+    .restmenu__mainheading{
+        margin: 0;
+    }
+
+    .restemenu__desc{
+        margin: .5em 0 .5em .8em;
+     }
+
+    .restmenu__text{
+        width: 250px;
+        margin: .5em auto 1em .8em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+     }
+
+    .restemnu__title{
+        margin: 1.5em 0 .5em 0;
+    }
+    
+    .restemnu__title__underline{
+        background-color: $color-tertiary;
+        padding: .2em 0;
+        border-radius: 20px;
+        width: 15%;
+    }
+    
+    .price{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-content: flex-end;
+        margin: -2em 1em .5em 1em;
     }
 
     .picture__menu{
         width: 100%;
         height: 250px;
-        object-fit: cover;
+        background-size: cover;
     }
 
-    .header__arrowback{
-        margin-right: 1.5em;
-        & .fas{
-            color: black;
+    .restmenu__dishes{
+        @include menu;
+        box-shadow: 3px 3px 6px gray;
+
+       & .restemenu__check{
+            position: relative;
+            top: -2em;
+            right: 0;
+            left: 90%;
+            opacity: 1;
         }
     }
