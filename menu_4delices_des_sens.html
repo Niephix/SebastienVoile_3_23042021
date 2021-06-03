@@ -1,91 +1,92 @@
 <!DOCTYPE html>
 <html lang=fr>
     <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/13299e9a17.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
-    <title>Ohmyfood</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/13299e9a17.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
+        <title>Ohmyfood</title>
     </head>
 
         <body>
     <div id="main">
         <header>
-            <span class="header_arrowback"><a href="index.html"><i class="fas fa-arrow-left"></i></a></span>
-            <div class="logo__header"><a href="index.html"><img src="ohmyfood@2x.svg" alt="logo ohmyfood"/></a></div>
+            <div class="logo__header"><span class="header__arrowback"><a href="index.html"><i class="fas fa-arrow-left"></i></a></span> <a href="index.html"><img src="ohmyfood@2x.svg" alt="logo ohmyfood"/></a></div>
         </header>
 
-        <div class="bg-imagemenu">
-            <img src="images/04_le_delice_des_sens.jpg" alt="photo d'une assiette remplie" class="picture__menu">
-        </div>
+        <background-image><img src="images/01_palette_du_gout.jpg" alt="photo d'une assiette remplie" class="picture__menu"></background-image>
 
         <!--Menu's presentation start-->
         <section>
             <div class="restmenu">
-                <h1 class="restmenu__mainheading">Le délice des sens <span class="restnames__hicon"><i class="far fa-heart"></i></span>
-                    <span class="restnames__hiconfull"><i class="fas fa-heart"></i></span></h1>
+                <h1 class="restmenu__mainheading">Le délice des sens<span class="restnames__hicon restnames__hicon--position"><i class="far fa-heart"></i></span>
+                    <span class="restnames__hiconfull restnames__hiconfull--position"><i class="fas fa-heart"></i></span></h1>
                  <!--Starters-->
-                    <h2 class="restemnu__title">ENTRÉES</h2>
-                    <article class="restemenu__starters">
+                 <h2 class="restemnu__title">ENTRÉES</h2>
+                 <div class="restemnu__title__underline"></div>
+                    <article class="restmenu__dishes">
                         <h3 class="restemenu__desc">Tarte de thon</h3>
-                        <p>Assaisonné au yuzu <strong class="price">25€</strong></p>
-                        <span class="restemenu__check"><i class="fas fa-check"></i></span>
+                        <p class="restmenu__text">Assaisonné au yuzu</p><strong class="price">25€</strong>
+                        <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                     </article>
 
-                    <article class="restemenu__starters">
+                    <article class="restmenu__dishes">
                         <h3 class="restemenu__desc">Bouchée de homard croustillant</h3>
-                        <p>Et sa farandole de petits légumes <strong class="price">35€</strong></p>
-                        <span class="restemenu__check" ><i class="fas fa-check"></i></span>
+                        <p class="restmenu__text">Et sa farandole de petits légumes</p><strong class="price">35€</strong>
+                        <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                     </article>
 
-                    <article class="restemenu__starters">
+                    <article class="restmenu__dishes">
                         <h3 class="restemenu__desc">Velouté de cèpes </h3>
-                        <p>Aux truffes <strong class="price">20€</strong></p>
-                        <span class="restemenu__check"><i class="fas fa-check"></i></span>
+                        <p class="restmenu__text">Aux truffes</p><strong class="price">20€</strong>
+                        <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                     </article>
 
                 <!--Dishes-->
-                        <h2 class="restemnu__title">PLATS</h2>
-                        <article class="restemenu__dishes">
+                <h2 class="restemnu__title">PLATS</h2>
+                <div class="restemnu__title__underline"></div>
+                        <article class="restmenu__dishes">
                             <h3 class="restemenu__desc">Poulet rôti aux herbes de provence</h3>
-                            <p>Et sa crème de truffe <strong class="price">40€</strong></p>
-                            <span class="restemenu__check"><i class="fas fa-check"></i></span>
+                            <p class="restmenu__text">Et sa crème de truffe</p><strong class="price">40€</strong>
+                            <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                         </article>
 
-                        <article class="restemenu__dishes">
+                        <article class="restmenu__dishes">
                             <h3 class="restemenu__desc">Langouste rôtie</h3>
-                            <p>Et ses légumes de saison <strong class="price">35€</strong></p>
-                            <span class="restemenu__check"><i class="fas fa-check"></i></span>
+                            <p class="restmenu__text">Et ses légumes de saison</p><strong class="price">35€</strong>
+                            <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                         </article>
 
-                        <article class="restemenu__dishes">
+                        <article class="restmenu__dishes">
                             <h3 class="restemenu__desc">Côte de boeuf angus</h3>
-                            <p>Et sa purée de panais <strong class="price">44€</strong></p>
-                            <span class="restemenu__check"><i class="fas fa-check"></i></span>
+                            <p class="restmenu__text">Et sa purée de panais</p><strong class="price">44€</strong>
+                            <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                         </article>
 
                     <!--Desserts-->
-                       <h2 class="restemnu__title">DESSERTS</h2>
-                       <article class="restemenu__desserts">
+                    <h2 class="restemnu__title">DESSERTS</h2>
+                    <div class="restemnu__title__underline"></div>
+
+                        <article class="restmenu__dishes">
                         <h3 class="restemenu__desc">Farandole de desserts</h3>
-                        <p>Du chef <strong class="price">18€</strong></p>
-                        <span class="restemenu__check" ><i class="fas fa-check"></i></span>
+                        <p class="restmenu__text">Du chef</p><strong class="price">18€</strong>
+                        <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                        </article>
 
-                       <article class="restemenu__desserts">
+                       <article class="restmenu__dishes">
                         <h3 class="restemenu__desc">Crème brûlée</h3>
-                        <p>Revisitée <strong class="price">22€</strong></p>
-                        <span class="restemenu__check" ><i class="fas fa-check"></i></span>
+                        <p class="restmenu__text">Revisitée</p><strong class="price">22€</strong>
+                        <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                        </article>
 
-                       <article class="restemenu__desserts">
+                       <article class="restmenu__dishes">
                         <h3 class="restemenu__desc">Tiramisu</h3>
-                        <p>À la noisette <strong class="price">23€</strong></p>
-                        <span class="restemenu__check"><i class="fas fa-check"></i></span>
+                        <p class="restmenu__text">À la noisette</p><strong class="price">23€</strong>
+                        <!--<span class="restemenu__check"><i class="fas fa-check"></i></span>-->
                        </article>
             <!--Menu's presentation end-->
                        

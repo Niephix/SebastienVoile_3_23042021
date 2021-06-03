@@ -108,13 +108,10 @@ body{
     
     .restmenu{
        @extend %flex_spaceevenly;
-       position: relative;
-       top: -2em;
-       /*margin-top: -3em;*/
+       margin-top: -2em;
        padding: 1.8em 1.2em ;
-       border-radius: 40px 40px 0 0;
+       border-radius: 35px 35px 0 0;
        background-color: $color-bgrestname;
-       z-index: 6;
     }
 
     .restmenu__mainheading{
@@ -126,13 +123,14 @@ body{
      }
 
     .restmenu__text{
+        display: block;
         width: 250px;
-        margin: .5em auto 1em .8em;
+        margin: 0 auto 1em .8em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
      }
-
+    
     .restemnu__title{
         margin: 1.5em 0 .5em 0;
     }
@@ -152,21 +150,69 @@ body{
         margin: -2em 1em .5em 1em;
     }
 
+    .price::before{
+        content: "✓";
+        color: $color-tertiary;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: white;
+        border-radius: 50%;
+        margin: -1.4em -3.2em;
+        z-index: 3;
+        text-align: center;
+    }
+
+    .price::after{
+        content: "";
+        font-weight: bold;
+        text-align: center;
+        border-radius: 0 20px 20px 0;
+        background: $color-tertiary;
+        display: inline-block;
+        width: 62px;
+        height: 71px;
+        margin: -2.8em -1em;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    /* font-size: 20px;
+        color: $color-tertiary;
+        display: inline-block;
+        width: auto;
+        height: 100%;
+        line-height: 26px;*/
+    /*.checking{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 65px;
+        height: 70px;
+        border-radius: 0 20px 20px 0;
+        background: $color-tertiary;
+        opacity: 1;
+    }*/
+
+    /*.restmenu__check{
+        position: absolute;
+        top: -2em;
+        left: 20%;
+        border-radius: 50%;
+        background: white;
+        padding: .7em;
+        color: $color-tertiary;
+}*/
+    
     .picture__menu{
-        width: 100%;
+        position: relative;
         height: 250px;
-        background-size: cover;
+        object-fit: cover;
+        background-image: fixed no-repeat top center;
+        z-index: -3;
     }
 
     .restmenu__dishes{
         @include menu;
         box-shadow: 3px 3px 6px gray;
-
-       & .restemenu__check{
-            position: relative;
-            top: -2em;
-            right: 0;
-            left: 90%;
-            opacity: 1;
-        }
-    }
+       }

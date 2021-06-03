@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Mains colors*/
 /*Backgrounds'colors*/
 /*texts, buttons'colors*/
@@ -197,13 +198,10 @@ a {
 }
 
 .restmenu {
-  position: relative;
-  top: -2em;
-  /*margin-top: -3em;*/
+  margin-top: -2em;
   padding: 1.8em 1.2em;
-  border-radius: 40px 40px 0 0;
+  border-radius: 35px 35px 0 0;
   background-color: #f0f1f3;
-  z-index: 6;
 }
 
 .restmenu__mainheading {
@@ -215,8 +213,9 @@ a {
 }
 
 .restmenu__text {
+  display: block;
   width: 250px;
-  margin: 0.5em auto 1em 0.8em;
+  margin: 0 auto 1em 0.8em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -249,10 +248,65 @@ a {
   margin: -2em 1em 0.5em 1em;
 }
 
+.price::before {
+  content: "✓";
+  color: #99e2d0;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  margin: -1.4em -3.2em;
+  z-index: 3;
+  text-align: center;
+}
+
+.price::after {
+  content: "";
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  background: #99e2d0;
+  display: inline-block;
+  width: 62px;
+  height: 71px;
+  margin: -2.8em -1em;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* font-size: 20px;
+    color: $color-tertiary;
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    line-height: 26px;*/
+/*.checking{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 70px;
+    border-radius: 0 20px 20px 0;
+    background: $color-tertiary;
+    opacity: 1;
+}*/
+/*.restmenu__check{
+        position: absolute;
+        top: -2em;
+        left: 20%;
+        border-radius: 50%;
+        background: white;
+        padding: .7em;
+        color: $color-tertiary;
+}*/
 .picture__menu {
-  width: 100%;
+  position: relative;
   height: 250px;
-  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: fixed no-repeat top center;
+  z-index: -3;
 }
 
 .restmenu__dishes {
@@ -262,13 +316,6 @@ a {
   border-radius: 20px 20px 20px 20px;
   -webkit-box-shadow: 3px 3px 6px gray;
           box-shadow: 3px 3px 6px gray;
-}
-.restmenu__dishes .restemenu__check {
-  position: relative;
-  top: -2em;
-  right: 0;
-  left: 90%;
-  opacity: 1;
 }
 
 .choices__heading, .choices__text, .functionnement__btn, .describe__heading, .explain__heading, .restnames__heading, .restnames__text, .restnames__textbis, .restnames__newrest, .restemnu__title, .restemenu__desc, .restmenu__text, footer li {
@@ -296,11 +343,19 @@ a {
 }
 
 .btn--command {
-  position: relative;
-  top: 35px;
+  /*position: relative;
+  top: 15px;
   left: 25%;
-  bottom: 25px;
-  right: 25%;
+  right: 25%;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 2em 0;
   width: 50%;
 }
 
@@ -387,6 +442,8 @@ a {
   right: 0;
   left: 45%;
   color: #9356dc;
+  -webkit-transform-origin: left;
+          transform-origin: left;
   animation: rotation__utensils 3s ease-in-out both infinite alternate-reverse;
 }
 @-webkit-keyframes rotation__utensils {

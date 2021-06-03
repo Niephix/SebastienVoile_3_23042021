@@ -14,11 +14,14 @@
 }
 
 .btn--command{
-    position: relative;
-    top: 35px;
+    /*position: relative;
+    top: 15px;
     left: 25%;
-    bottom: 25px;
-    right: 25%;
+    right: 25%;*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 2em 0;
     width: 50%;
 }
 

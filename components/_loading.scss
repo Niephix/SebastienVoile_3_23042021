@@ -39,6 +39,7 @@
             right: 0;
             left: 45%;
             color: $color-primary;
+            transform-origin: left;
             animation: rotation__utensils 3s ease-in-out both infinite alternate-reverse;
               }
           @keyframes rotation__utensils{
