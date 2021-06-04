@@ -254,15 +254,54 @@ a {
   margin: -2em 1em 0.5em 1em;
 }
 
-.checking {
+.checking1, .checking2, .checking3 {
   position: relative;
   top: -4.4em;
-  left: 272px;
-  bottom: 0;
+  left: 257px;
   width: 65px;
   height: 70px;
   border-radius: 0 20px 20px 0;
   background: #99e2d0;
+  -webkit-animation: checking__sliding 10s linear 1;
+          animation: checking__sliding 10s linear 1;
+}
+@-webkit-keyframes checking__sliding {
+  0% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+@keyframes checking__sliding {
+  0% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
 }
 
 .restmenu__check {
@@ -277,14 +316,29 @@ a {
   font-size: 18px;
   font-weight: 900;
   padding: 0.5em 0.6em 0.5em 0.6em;
+  opacity: 1;
   z-index: 3;
   text-align: center;
 }
 .restmenu__check :hover {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: scale(1.2) rotate(90deg);
+          transform: scale(1.2) rotate(90deg);
+  /*transform: rotate(90deg);*/
 }
 
+/*animation: check__rotation  1s ease-in-out infinite;*/
+/*@keyframes check__rotation{
+    0%{
+
+        opacity: 1;
+        transform: rotate(90deg);
+
+    }
+
+    100%{
+        transform: rotate(0);
+    }
+}*/
 .picture__menu {
   position: relative;
   height: 250px;

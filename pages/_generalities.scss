@@ -86,9 +86,7 @@ body{
    .restnames__textbis{
         margin: 0.4em 2em 0 1.5em;
     }
-
-    
-       
+  
     .restnames__hicon{
         @include rest__hicon;
     }
@@ -158,16 +156,37 @@ body{
         margin: -2em 1em .5em 1em;
     }
 
-    .checking{
+    .checking1, .checking2, .checking3{
         position: relative;
         top: -4.4em;
-        left: 272px;
-        bottom: 0;
+        left: 257px;
         width: 65px;
         height: 70px;
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
+        animation: checking__sliding 10s linear 1;
+        :hover{
+            @keyframes checking__sliding{
+   
+                0%{
+                    transform: translateX(100px);
+                    opacity: 0;
+                }
+            
+                50%{
+                    transform: translateX(-3px);
+                    opacity: 1;
+                }
+            
+                100%{
+                    transform: translateX(100px);
+                    opacity: 0;
+                    animation-play-state: paused;
+                }
+            }
+        }
     }
+
     .restmenu__check{
         color: $color-tertiary;
         position: relative;
@@ -180,13 +199,30 @@ body{
         font-size: 18px;
         font-weight: 900;
         padding: .5em .6em .5em .6em;
+        opacity: 1;
         z-index: 3;
         text-align: center;
         :hover{
-            transform: rotate(90deg);
+            transform: scale(1.2) rotate(90deg);
+            /*transform: rotate(90deg);*/
         }
     }
-    
+
+     /*animation: check__rotation  1s ease-in-out infinite;*/
+
+    /*@keyframes check__rotation{
+        0%{
+            
+            opacity: 1;
+            transform: rotate(90deg);
+            
+        }
+
+        100%{
+            transform: rotate(0);
+        }
+    }*/
+
     .picture__menu{
         position: relative;
         height: 250px;
