@@ -11,18 +11,21 @@
     background-image: linear-gradient(to top left, $color-primary, $color-secondary);
     color: white;
     cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }   
 }
 
 .btn--command{
-    /*position: relative;
-    top: 15px;
-    left: 25%;
-    right: 25%;*/
     display: flex;
+    font-weight: bold;
     justify-content: center;
     align-content: center;
     margin: 2em 0;
     width: 50%;
+    &:hover{
+        transform: scale(1.1);
+    }   
 }
 
 .functionnement__btn{
@@ -41,4 +44,3 @@
         background: lighten($color-primary, $amount: 30);
     }
 }
-
