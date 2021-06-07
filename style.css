@@ -202,21 +202,65 @@ a {
 
 .restmenu {
   margin-top: -2em;
-  padding: 1.8em 1.2em;
+  padding: 1.8em 1em;
   border-radius: 35px 35px 0 0;
   background-color: #f0f1f3;
 }
 
 .restmenu__mainheading {
-  margin: 0;
+  margin: 0 0.2em;
+}
+
+.restmenu__dishes {
+  height: 70px;
+  z-index: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .restemenu__desc {
   margin: 0.5em 0 0.5em 0.8em;
+  text-overflow: ellipsis;
 }
 
-.restmenu__dishes {
-  max-height: 70px;
+.checking {
+  position: relative;
+  top: -4.4em;
+  left: 340px;
+  max-width: 65px;
+  height: 70px;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  background: #99e2d0;
+}
+.checking:hover {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateX(-62px);
+          transform: translateX(-62px);
+  opacity: 1;
+}
+
+.restmenu__check {
+  color: #99e2d0;
+  position: absolute;
+  top: 1em;
+  left: 0.6em;
+  background: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 0.5em 0.6em 0.5em 0.6em;
+  text-align: center;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+.restmenu__check:hover {
+  -webkit-transform: translateX(0) rotate(360deg);
+          transform: translateX(0) rotate(360deg);
 }
 
 .restmenu__text {
@@ -228,13 +272,14 @@ a {
 }
 
 .restemnu__title {
-  margin: 1.5em 0 0.5em 0;
+  margin: 1.5em 0 0.2em 0.2em;
 }
 
 .restemnu__title__underline {
   background-color: #99e2d0;
   padding: 0.2em 0;
   border-radius: 20px;
+  margin-left: 0.2em;
   width: 15%;
 }
 
@@ -254,91 +299,6 @@ a {
   margin: -2em 1em 0.5em 1em;
 }
 
-.checking1, .checking2, .checking3 {
-  position: relative;
-  top: -4.4em;
-  left: 257px;
-  width: 65px;
-  height: 70px;
-  border-radius: 0 20px 20px 0;
-  background: #99e2d0;
-  -webkit-animation: checking__sliding 10s linear 1;
-          animation: checking__sliding 10s linear 1;
-}
-@-webkit-keyframes checking__sliding {
-  0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-    opacity: 0;
-  }
-  50% {
-    -webkit-transform: translateX(-3px);
-            transform: translateX(-3px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-    opacity: 0;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-}
-@keyframes checking__sliding {
-  0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-    opacity: 0;
-  }
-  50% {
-    -webkit-transform: translateX(-3px);
-            transform: translateX(-3px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-    opacity: 0;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-}
-
-.restmenu__check {
-  color: #99e2d0;
-  position: relative;
-  top: 25px;
-  left: 12px;
-  width: 25px;
-  height: 25px;
-  background: white;
-  border-radius: 50%;
-  font-size: 18px;
-  font-weight: 900;
-  padding: 0.5em 0.6em 0.5em 0.6em;
-  opacity: 1;
-  z-index: 3;
-  text-align: center;
-}
-.restmenu__check :hover {
-  -webkit-transform: scale(1.2) rotate(90deg);
-          transform: scale(1.2) rotate(90deg);
-  /*transform: rotate(90deg);*/
-}
-
-/*animation: check__rotation  1s ease-in-out infinite;*/
-/*@keyframes check__rotation{
-    0%{
-
-        opacity: 1;
-        transform: rotate(90deg);
-
-    }
-
-    100%{
-        transform: rotate(0);
-    }
-}*/
 .picture__menu {
   position: relative;
   height: 250px;
@@ -350,11 +310,14 @@ a {
 
 .restmenu__dishes {
   width: 100%;
-  margin: 1em 0;
+  margin: 1em 0.5em 0 0.5em;
   background-color: white;
   border-radius: 20px 20px 20px 20px;
   -webkit-box-shadow: 3px 3px 6px gray;
           box-shadow: 3px 3px 6px gray;
+}
+.restmenu__dishes:hover {
+  width: 90%;
 }
 
 .choices__heading, .choices__text, .functionnement__btn, .describe__heading, .explain__heading, .restnames__heading, .restnames__text, .restnames__textbis, .restnames__newrest, .restemnu__title, .restemenu__desc, .restmenu__text, .btn--command, footer li {
@@ -397,10 +360,6 @@ a {
       align-content: center;
   margin: 2em 0;
   width: 50%;
-}
-.btn--command:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .functionnement__btn {

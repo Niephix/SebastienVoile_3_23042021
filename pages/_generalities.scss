@@ -112,21 +112,62 @@ body{
     .restmenu{
        @extend %flex_spaceevenly;
        margin-top: -2em;
-       padding: 1.8em 1.2em ;
+       padding: 1.8em 1em ;
        border-radius: 35px 35px 0 0;
        background-color: $color-bgrestname;
     }
 
     .restmenu__mainheading{
-        margin: 0;
+        margin: 0 .2em;
+    }
+
+    .restmenu__dishes{
+        height: 70px;
+        z-index: 1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
     }
 
     .restemenu__desc{
         margin: .5em 0 .5em .8em;
+        text-overflow: ellipsis;
     }
 
-    .restmenu__dishes{
-        max-height: 70px;
+    .checking{
+        position: relative;
+        top: -4.4em;
+        left: 340px;
+        max-width: 65px;
+        height: 70px;
+        z-index: 1;
+        opacity: 0;
+        cursor: pointer;
+        border-radius: 0 20px 20px 0;
+        background: $color-tertiary;
+        &:hover{
+                transition: all 1s;
+                transform: translateX(-62px);
+                opacity: 1;
+        }
+    }
+
+    .restmenu__check{
+        color: $color-tertiary;
+        position: absolute;
+        top: 1em;
+        left: .6em;
+        background: white;
+        border-radius: $circle;
+        font-size: 18px;
+        font-weight: 900;
+        padding: .5em .6em .5em .6em;
+        text-align: center;
+        transition: all 2s;
+        &:hover{
+            transform: translateX(0) rotate(360deg);
+        }
+       
     }
 
     .restmenu__text{
@@ -138,13 +179,14 @@ body{
      }
     
     .restemnu__title{
-        margin: 1.5em 0 .5em 0;
+        margin: 1.5em 0 .2em .2em;
     }
     
     .restemnu__title__underline{
         background-color: $color-tertiary;
         padding: .2em 0;
         border-radius: 20px;
+        margin-left: .2em;
         width: 15%;
     }
     
@@ -155,73 +197,6 @@ body{
         align-content: flex-end;
         margin: -2em 1em .5em 1em;
     }
-
-    .checking1, .checking2, .checking3{
-        position: relative;
-        top: -4.4em;
-        left: 257px;
-        width: 65px;
-        height: 70px;
-        border-radius: 0 20px 20px 0;
-        background: $color-tertiary;
-        animation: checking__sliding 10s linear 1;
-        :hover{
-            @keyframes checking__sliding{
-   
-                0%{
-                    transform: translateX(100px);
-                    opacity: 0;
-                }
-            
-                50%{
-                    transform: translateX(-3px);
-                    opacity: 1;
-                }
-            
-                100%{
-                    transform: translateX(100px);
-                    opacity: 0;
-                    animation-play-state: paused;
-                }
-            }
-        }
-    }
-
-    .restmenu__check{
-        color: $color-tertiary;
-        position: relative;
-        top: 25px;
-        left: 12px;
-        width: 25px;
-        height: 25px;
-        background: white;
-        border-radius: $circle;
-        font-size: 18px;
-        font-weight: 900;
-        padding: .5em .6em .5em .6em;
-        opacity: 1;
-        z-index: 3;
-        text-align: center;
-        :hover{
-            transform: scale(1.2) rotate(90deg);
-            /*transform: rotate(90deg);*/
-        }
-    }
-
-     /*animation: check__rotation  1s ease-in-out infinite;*/
-
-    /*@keyframes check__rotation{
-        0%{
-            
-            opacity: 1;
-            transform: rotate(90deg);
-            
-        }
-
-        100%{
-            transform: rotate(0);
-        }
-    }*/
 
     .picture__menu{
         position: relative;
@@ -234,4 +209,7 @@ body{
     .restmenu__dishes{
         @include menu;
         box-shadow: 3px 3px 6px gray;
-       }
+        &:hover{
+            width: 90%;
+        }
+    }
