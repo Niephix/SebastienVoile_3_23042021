@@ -4,7 +4,7 @@ body{
 }
 
 #main{
-    overflow: hidden;
+   overflow: hidden;
 }
 
 .header__arrowback{
@@ -46,8 +46,9 @@ body{
     }
 }
 
-    .restnames__article{
+.restnames__article{
         @include cards;
+        @include restnames__article;
     }
     
     .rest__picture{
@@ -77,6 +78,7 @@ body{
         top: -190px;
         left: 230px;
         margin: 0;
+        @include restnames__newrest;   
     }
 
     .restnames__text{
@@ -111,43 +113,47 @@ body{
     
     .restmenu{
        @extend %flex_spaceevenly;
-       margin-top: -2em;
+       margin: -2em 0;
        padding: 1.8em 1em ;
        border-radius: 35px 35px 0 0;
        background-color: $color-bgrestname;
     }
 
     .restmenu__mainheading{
-        margin: 0 .2em;
+        margin: 0 .3em;
     }
 
     .restmenu__dishes{
-        height: 70px;
-        z-index: 1;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        cursor: pointer;
-    }
+        @include menu;
+        box-shadow: 3px 3px 6px gray;
+        flex: auto;
+        @include restmenu__dishes;
+    }    
 
     .restemenu__desc{
         margin: .5em 0 .5em .8em;
         text-overflow: ellipsis;
+        white-space: nowrap;
+        width: auto;
+        @include restmenu__desc;
     }
 
     .checking{
         position: relative;
-        top: -4.4em;
-        left: 340px;
-        max-width: 65px;
+        top: -7.63em;
+        left: 330px;
+        width: 65px;
         height: 70px;
         z-index: 1;
         opacity: 0;
         cursor: pointer;
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
+        flex: auto;
+        @include checking;
         &:hover{
-                transition: all 1s;
-                transform: translateX(-62px);
+                transition: all 6s;
+                transform: translateX(-65px);
                 opacity: 1;
         }
     }
@@ -163,7 +169,7 @@ body{
         font-weight: 900;
         padding: .5em .6em .5em .6em;
         text-align: center;
-        transition: all 2s;
+        transition: all 3s;
         &:hover{
             transform: translateX(0) rotate(360deg);
         }
@@ -176,17 +182,18 @@ body{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include restmenu__text;
      }
     
     .restemnu__title{
-        margin: 1.5em 0 .2em .2em;
+        margin: 1.5em 0 .2em .3em;
     }
     
     .restemnu__title__underline{
         background-color: $color-tertiary;
         padding: .2em 0;
         border-radius: 20px;
-        margin-left: .2em;
+        margin-left: .5em;
         width: 15%;
     }
     
@@ -195,7 +202,13 @@ body{
         flex-flow: row nowrap;
         justify-content: flex-end;
         align-content: flex-end;
-        margin: -2em 1em .5em 1em;
+        margin: -2em 1.5em .5em 1.5em;
+        height: 70px;
+        transition: all 6s;
+        &:hover{
+            margin-right: 3em;
+            cursor: pointer;
+        }
     }
 
     .picture__menu{
@@ -206,10 +219,4 @@ body{
         z-index: -3;
     }
 
-    .restmenu__dishes{
-        @include menu;
-        box-shadow: 3px 3px 6px gray;
-        &:hover{
-            width: 90%;
-        }
-    }
+    

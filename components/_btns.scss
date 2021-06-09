@@ -3,6 +3,7 @@
     position: relative;
     left: 22%;
     right: 25%;
+    display: inline-block;
     text-align: center;
     padding: 1em 2.3em;
     border-radius: 2em;
@@ -11,18 +12,17 @@
     background-image: linear-gradient(to top left, $color-primary, $color-secondary);
     color: white;
     cursor: pointer;
+    width: 220px;
+    @include btn;  
     &:hover{
         transform: scale(1.1);
     }  
 }
 
 .btn--command{
-    display: flex;
     font-weight: bold;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
     margin: 2em 0;
-    width: 50%;  
 }
 
 .functionnement__btn{
@@ -35,7 +35,7 @@
     border-radius: 2em 2em;
     width: 100%;
     border: none;
-    box-shadow: 6px 6px 10px $color-functionnement__btn;
+    box-shadow: 5px 5px 8px $color-functionnement__btn;
     font-size: 18px;
     &.functionnement__btn:hover{
         background: lighten($color-primary, $amount: 30);
