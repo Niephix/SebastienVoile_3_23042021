@@ -30,19 +30,20 @@
         }
                    
         .loading__spinner__utensils{
-            width: auto;
             font-size: 50px;
-            position: absolute;
-            top: 35%;
-            right: 0;
-            left: 45%;
+            position: relative;
+            top: -8%;
+            right:0;
+            left: 0;
+            opacity: 1;
             color: $color-primary;
-            transform-origin: left;
-            animation: rotation__utensils 3s ease-in-out both infinite alternate-reverse;
-              }
-          @keyframes rotation__utensils{
+            transform-origin: center;
+            @include loading__utensils;
+            animation: rotation__utensils 3s 0.5s ease-in-out both infinite alternate-reverse;
+        }
+        @keyframes rotation__utensils{
             0%{
-              transform: none;
+              transform: rotate3d(1, 1, 1, 0deg);
               }
   
             50%{
@@ -52,19 +53,17 @@
 
             98%{
             transform: rotate3d(1, 1, 1, 360deg);
-            font-size: 60px;
             }
 
             100%{
-            
             opacity: 0;
               }
-            }
+          }
               
           .loading__spinner__logo{
-          width: auto;
           position: absolute;
-          font-size: 50px;
+          font-size: 45px;
+          @include loading__logo;
           color: $color-secondary;
           animation: logo__spinner 3s ease-in-out infinite alternate-reverse;
           }
@@ -74,27 +73,12 @@
             }
   
             50%{
-            transform-origin: center;
             color: #9356dc;
             letter-spacing: .25em;
             }
   
-          100%{
-            transform-origin: none;
+            100%{
             opacity: 0;
             }
           }
         }
-        
-        
-        
-      
-       
-
-
-
-
-
-
-
-

@@ -5,14 +5,22 @@
     background-color: white;
     border-radius: 3em;
     border:none;
+    @media screen and (min-width:720px){
+        width: 350px;
+        height: 350px;
+    }
 }
 
 @mixin picturescards{
-    width:100%;
+    width: 100%;
     height: 65%;
     object-fit: cover;
     object-position: center;
-    border-radius: 3em 3em 0 0;   
+    border-radius: 3em 3em 0 0;
+    @media screen and (min-width:720px){
+        width: 350px;
+        height: 78%;
+    }  
 }
 
 @mixin rest__hicon{
@@ -44,7 +52,6 @@
     }
 }
 
-/*Media-queries -320px*/
 @mixin menu{
     width: 100%;
     height: 70px;
@@ -53,10 +60,17 @@
     border-radius: 20px 20px 20px 20px;
 }
 
+/*Media-queries*/
 @mixin inputtowns{
     @media screen and (max-width:320px){
         position: relative;
         left: 27%;
+        top: 1.9em;
+        right: 0;
+    }
+    @media screen and (min-width:720px){
+        position: relative;
+        left: 33%;
         top: 1.9em;
         right: 0;
     }
@@ -67,27 +81,46 @@
         position: relative;
         left: 15%;
         right: 0;
+    }
+    @media screen and (min-width:720px){
+        width: 350px;
+        font-size: 18px;
     }   
+}
+
+@mixin restnames_L{
+    @media screen and (min-width:720px){
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        box-sizing: border-box;
+        width: 30%;
+    }
 }
 
 @mixin restnames__article{
     @media screen and (max-width:320px){
         width: 290px;
     }
-    
 }
 
 @mixin restnames__newrest{
     @media screen and (max-width:320px){
         position: relative;
         left: 200px;
-    }   
+    }
+    @media screen and (min-width:720px){
+        position: relative;
+        top: -300px;
+        left: 255px;
+    }
 }
 
 @mixin restmenu__text{
     @media screen and (max-width:320px){
         width: 200px;
-    }   
+    } 
 }
 
 @mixin restmenu__dishes{
@@ -102,5 +135,54 @@
     }   
 }
 
-/*Media-Queries +720px/*
+@mixin loading__logo{
+    @media screen and (min-width:720px){
+        font-size: 80px;
+    }
+}
 
+@mixin loading__utensils{
+    @media screen and (min-width:720px){
+        font-size: 80px;
+        position: relative;
+        top: -15%;
+    }
+}
+
+@mixin placeholder_large {
+    @media screen and (min-width:720px){
+        font-size: 18px; 
+    }    
+}
+
+@mixin functionnement__btn_L{
+    @media screen and (min-width:720px){
+        width: 390px;
+        margin: 1em auto; 
+        text-align: start;
+    }   
+}
+
+@mixin heading {
+    @media screen and (min-width:720px){
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+}
+
+@mixin footer_Logo_large{
+    @media screen and (min-width:720px){
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    } 
+}
+
+@mixin ul_large{
+    @media screen and (min-width:720px){
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+}

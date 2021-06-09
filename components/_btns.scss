@@ -13,7 +13,7 @@
     color: white;
     cursor: pointer;
     width: 220px;
-    @include btn;  
+    @include btn;
     &:hover{
         transform: scale(1.1);
     }  
@@ -22,21 +22,21 @@
 .btn--command{
     font-weight: bold;
     text-align: center;
-    margin: 2em 0;
+    margin: 2em 0 2em -1em;
 }
 
 .functionnement__btn{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
-    align-items: center;
-    margin: 1em 0; 
+    margin: .5em 0; 
     padding: 1em;
     border-radius: 2em 2em;
-    width: 100%;
     border: none;
     box-shadow: 5px 5px 8px $color-functionnement__btn;
     font-size: 18px;
+    width: 300px;
+    @include functionnement__btn_L;
     &.functionnement__btn:hover{
         background: lighten($color-primary, $amount: 30);
     }

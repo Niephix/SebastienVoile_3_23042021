@@ -5,10 +5,10 @@ footer{
     
     ul{
         display: flex;
-        justify-content: space-between;
-        align-content: center;
-        flex-flow: column;
+        align-content: flex-start;
+        flex-flow: column wrap;
         list-style: none;
+        @include ul_large;
     }
     
     li{
@@ -23,7 +23,8 @@ footer, .logo__footer, .logo__footer__heading, .footer__list{
 .logo__footer__heading{
         font-family: 'Shrikhand', cursive; 
         font-size: 16px;
-        padding-left: 1em; 
+        padding-left: 1em;
+        @include footer_Logo_large;
     }
 
     .logo__footer__collaborate{
@@ -33,7 +34,6 @@ footer, .logo__footer, .logo__footer__heading, .footer__list{
     .logo__footer__partners{
         padding-right: .5em;
     }
-
     
 
 

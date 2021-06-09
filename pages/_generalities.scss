@@ -18,26 +18,44 @@ body{
     font-size: 20px;
     text-align: center;
     margin-bottom: 1.8em;
-    margin-top: 0;
+}
+
+.explain__heading{
+    margin-left: .6em;
+    @include heading;
 }
 
 .functionnement{
-    padding: 0 1.25em;
+    padding: 0 1em 0 1em;
     margin-bottom: 2em;
+    @extend %flex_center_column_bs;
+}
+
+.functionnement__num, .functionnement__num2{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    border-radius: 100%;
+    background-color: $color-primary;
+    color: $color-bgarticle; 
+    font-size: 14px;
+    padding: 0.5em 0.8em 0.5em 0.8em;
 }
 
 .functionnement__num{
-    display: flex;
-    justify-content: flex-start;
-    margin: 0 0.7em 0 -1.7em;
-    border-radius: 100%;
-    background-color: $color-primary;
-    padding: 0.5em 0.8em 0.5em 0.8em;
-    color: $color-bgarticle; 
-    font-size: 14px; 
+    margin-left: -3.2em;
+}
+
+.functionnement__num2{
+    margin-left: -3.8em;
+}
+
+.functionnement__text{
+    text-align: center;
 }
 
 .functionnement__icon{
+    text-align: center;
     margin: 0 1em;
     font-weight: bold;
     color: gray;
@@ -46,78 +64,86 @@ body{
     }
 }
 
+.describe__heading{
+    margin: 0;
+    padding: 2em 0 1em .6em;
+    @include heading;
+}
+
+.restnames{
+    background-color: $color-bgrestname;
+}
+
+.article{
+    @extend %flex_spaceevenly_bb;
+}
+
+.restnames__heading{
+    font-size: 20px;
+    color: black;
+    margin: 1em 0 0 1.2em;
+}
+
 .restnames__article{
-        @include cards;
-        @include restnames__article;
-    }
-    
-    .rest__picture{
-        @include picturescards;
-    }
-    
-    .restnames{
-        @extend %flex_spaceevenly_bs;
-        padding: 3em 0 3em 0;
-        background-color: $color-bgrestname; 
+    @include cards;
+    @include restnames__article;
+}
+
+.rest__picture{
+@include picturescards;
+}
+
+.restnames__newrest{
+    display: inline-block;
+    border:none;
+    background-color: $color-bgnewrest;
+    color: $color-textnew;
+    font-weight: bold;
+    padding: 0.3em;
+    position: relative;
+    top: -190px;
+    left: 230px;
+    margin: 0;
+    @include restnames__newrest;   
     }
 
-    .restnames__heading{
-        font-size: 20px;
-        color: black;
-        margin: 1em 0 0 1.2em;
-    }
+.restnames__text{
+     margin: -1.5em auto auto 1.5em;
+}
 
-    .restnames__newrest{
-        display: inline-block;
-        border:none;
-        background-color: $color-bgnewrest;
-        color: $color-textnew;
-        font-weight: bold;
-        padding: 0.3em;
-        position: relative;
-        top: -190px;
-        left: 230px;
-        margin: 0;
-        @include restnames__newrest;   
-    }
-
-    .restnames__text{
-        margin: -1.5em auto auto 1.5em;
-    }
-
-   .restnames__textbis{
-        margin: 0.4em 2em 0 1.5em;
-    }
+.restnames__textbis{
+    margin: 0.4em 2em 0 1.5em;
+}
   
-    .restnames__hicon{
-        @include rest__hicon;
-    }
+.restnames__hicon{
+    @include rest__hicon;
+}
 
-    .restnames__hiconfull{
-        @include rest__hiconfull;
-    }
+.restnames__hiconfull{
+    @include rest__hiconfull;
+}
 
-    .restnames__hicon--position{
-       position: relative;
-       top: 1em;
-    }
+.restnames__hicon--position{
+    position: relative;
+    top: 1em;
+}
 
-    .restnames__hiconfull--position{
-        position: relative;
-        top: 1em;
-    }
+.restnames__hiconfull--position{
+    position: relative;
+    top: 1em;
+}
 
-    a{
-        text-decoration: none;
-    }
+a{
+    text-decoration: none;
+}
     
-    .restmenu{
-       @extend %flex_spaceevenly;
-       margin: -2em 0;
-       padding: 1.8em 1em ;
-       border-radius: 35px 35px 0 0;
-       background-color: $color-bgrestname;
-    }
+.restmenu{
+    @extend %flex_spaceevenly;
+    margin: -2em 0;
+    padding: 1.8em 1em ;
+    border-radius: 35px 35px 0 0;
+    background-color: $color-bgrestname;
+}
 
     .restmenu__mainheading{
         margin: 0 .3em;
@@ -150,7 +176,6 @@ body{
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
         flex: auto;
-        @include checking;
         &:hover{
                 transition: all 6s;
                 transform: translateX(-65px);
@@ -218,5 +243,3 @@ body{
         background-image: fixed no-repeat top center;
         z-index: -3;
     }
-
-    
