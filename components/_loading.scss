@@ -1,84 +1,78 @@
 .loading__content{
-        position: fixed;
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        animation: loading__charging 10s ease-in-out both 1 normal;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  animation: loading__charging 10s ease-in-out both 1 normal;
+  
+  .loading__spinner{
+    @extend %flex_center_column;
+    background: no-repeat;
+    background-color: $color-bgrestname;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  @keyframes loading__charging{
+    from{
+      z-index: 1000;
+      opacity: 1;
+    }
+
+    to{
+      z-index: -1000;
+      opacity: 0;
+    }
+  }
+             
+  .loading__spinner__utensils{
+      font-size: 50px;
+      position: relative;
+      top: -10%;
+      right:0;
+      left: 0;
+      opacity: 1;
+      color: $color-primary;
+      transform-origin: center;
+      animation: rotation__utensils 3s 0.5s ease-in-out both infinite alternate-reverse;
+  }
+  @keyframes rotation__utensils{
+      0%{
+        transform: rotate3d(1, 1, 1, 0deg);
+        }
+
+      50%{
+        transform: rotate3d(1, 1, 1, 180deg);
+        color: #ff79da;
+        }
+
+      98%{
+      transform: rotate3d(1, 1, 1, 360deg);
+      }
+
+      100%{
+      opacity: 0;
+        }
+    }
         
-        .loading__spinner{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-content: center;
-        background: no-repeat;
-        background-color: $color-bgrestname;
-        background-position: center;
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-        }
-        @keyframes loading__charging{
-          from{
-            z-index: 1000;
-            opacity: 1;
-          }
+    .loading__spinner__logo{
+    position: absolute;
+    font-size: 45px;
+    color: $color-secondary;
+    animation: logo__spinner 3s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes logo__spinner{
+      0%{
+      transform: none;
+      }
 
-          to{
-            z-index: -1000;
-            opacity: 0;
-          }
-        }
-                   
-        .loading__spinner__utensils{
-            font-size: 50px;
-            position: relative;
-            top: -8%;
-            right:0;
-            left: 0;
-            opacity: 1;
-            color: $color-primary;
-            transform-origin: center;
-            @include loading__utensils;
-            animation: rotation__utensils 3s 0.5s ease-in-out both infinite alternate-reverse;
-        }
-        @keyframes rotation__utensils{
-            0%{
-              transform: rotate3d(1, 1, 1, 0deg);
-              }
-  
-            50%{
-              transform: rotate3d(1, 1, 1, 180deg);
-              color: #ff79da;
-              }
+      50%{
+      color: #9356dc;
+      letter-spacing: .25em;
+      }
 
-            98%{
-            transform: rotate3d(1, 1, 1, 360deg);
-            }
-
-            100%{
-            opacity: 0;
-              }
-          }
-              
-          .loading__spinner__logo{
-          position: absolute;
-          font-size: 45px;
-          @include loading__logo;
-          color: $color-secondary;
-          animation: logo__spinner 3s ease-in-out infinite alternate-reverse;
-          }
-          @keyframes logo__spinner{
-            0%{
-            transform: none;
-            }
-  
-            50%{
-            color: #9356dc;
-            letter-spacing: .25em;
-            }
-  
-            100%{
-            opacity: 0;
-            }
-          }
-        }
+      100%{
+      opacity: 0;
+      }
+    }
+  }

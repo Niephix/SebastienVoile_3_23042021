@@ -220,6 +220,29 @@
         padding-right: 0.5em;
     }
 
+    animation: checking__sliding 1s linear 1;
+       
+}
+
+@keyframes checking__sliding{
+   
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translateX(-3px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+
 
 
 

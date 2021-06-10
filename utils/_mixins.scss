@@ -19,7 +19,7 @@
     border-radius: 3em 3em 0 0;
     @media screen and (min-width:720px){
         width: 350px;
-        height: 78%;
+        height: 73%;
     }  
 }
 
@@ -60,7 +60,7 @@
     border-radius: 20px 20px 20px 20px;
 }
 
-/*Media-queries*/
+
 @mixin inputtowns{
     @media screen and (max-width:320px){
         position: relative;
@@ -77,14 +77,10 @@
 }
 
 @mixin btn{
-    @media screen and (max-width:320px){
-        position: relative;
-        left: 15%;
-        right: 0;
-    }
     @media screen and (min-width:720px){
-        width: 350px;
+        width: 370px;
         font-size: 18px;
+        font-weight: bold;
     }   
 }
 
@@ -108,11 +104,11 @@
 @mixin restnames__newrest{
     @media screen and (max-width:320px){
         position: relative;
-        left: 200px;
+        left: 195px;
     }
     @media screen and (min-width:720px){
         position: relative;
-        top: -300px;
+        top: -280px;
         left: 255px;
     }
 }
@@ -126,27 +122,18 @@
 @mixin restmenu__dishes{
     @media screen and (max-width:320px){
         width: 100%;
-    }   
+    }
+    @media screen and (min-width:720px){
+        width: 40%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
 
 @mixin restmenu__desc{
     @media screen and (max-width:320px){
        font-size: 18px;
     }   
-}
-
-@mixin loading__logo{
-    @media screen and (min-width:720px){
-        font-size: 80px;
-    }
-}
-
-@mixin loading__utensils{
-    @media screen and (min-width:720px){
-        font-size: 80px;
-        position: relative;
-        top: -15%;
-    }
 }
 
 @mixin placeholder_large {

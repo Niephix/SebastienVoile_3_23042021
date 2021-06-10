@@ -1,18 +1,14 @@
 
 .btn{
-    position: relative;
-    left: 22%;
-    right: 25%;
-    display: inline-block;
-    text-align: center;
+    @extend %center;
     padding: 1em 2.3em;
     border-radius: 2em;
+    margin: auto;
     border: none;
     box-shadow: 3px 3px 8px $color-primary;
     background-image: linear-gradient(to top left, $color-primary, $color-secondary);
     color: white;
     cursor: pointer;
-    width: 220px;
     @include btn;
     &:hover{
         transform: scale(1.1);
@@ -20,9 +16,8 @@
 }
 
 .btn--command{
-    font-weight: bold;
-    text-align: center;
-    margin: 2em 0 2em -1em;
+    margin: 1.5em auto;
+    @include btn;
 }
 
 .functionnement__btn{
