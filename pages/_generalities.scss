@@ -264,9 +264,14 @@ a{
         width: 250px;
         margin: 0 auto 1em .8em;
         white-space: nowrap;
-        overflow: hidden;
+        overflow:hidden;
         text-overflow: ellipsis;
         @include restmenu__text;
+        &:hover{
+            transition: width 0.3s ease-in-out;
+            width: 200px;
+            cursor: pointer;
+        }    
     }
 
     .checking{
@@ -277,14 +282,24 @@ a{
         height: 70px;
         z-index: 1;
         opacity: 0;
+        overflow: hidden;
         cursor: pointer;
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
         &:hover{
-                transition: all 6s;
+            animation: checking_sliding 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+        }
+        @keyframes checking_sliding{
+            0%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100%{
                 transform: translateX(-65px);
                 opacity: 1;
-        }
+            
+            }
+        }         
     }
 
     .restmenu__check{
@@ -298,10 +313,19 @@ a{
         font-weight: 900;
         padding: .5em .6em .5em .6em;
         text-align: center;
-        transition: all 3s;
+        transition: all 1s;
         &:hover{
-            transform: translateX(0) rotate(360deg);
+            animation: check_sliding 1s ease-in-out both 1;
         }
+        @keyframes check_sliding{
+            0%{
+                transform: rotate(360deg);
+            }
+            
+            100%{
+                transform: rotate(0);
+            }
+        }        
        
     }
     
@@ -312,11 +336,21 @@ a{
         align-content: flex-end;
         margin: -2em 1.5em .5em 1.5em;
         height: 70px;
-        transition: all 6s;
         &:hover{
-            margin-right: 3em;
-            cursor: pointer;
+            animation: price__sliding 2s ease-in-out both infinite;
         }
+        @keyframes price__sliding{
+            0%{
+                transform: translateX(-30px);
+                margin-left: 1.5em;
+             
+            }
+            100%{
+                transform: translateX(0);
+                margin-left: 0;
+            }
+        } 
+
     }
 
     .picture__menu{
