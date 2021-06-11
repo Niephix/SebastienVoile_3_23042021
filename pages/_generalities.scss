@@ -154,6 +154,9 @@ a{
 
     .restmenu__mainheading{
         margin: 0 .3em;
+        @media screen and (max-width:320px){
+            font-size: 20px;
+        }
         @media screen and (min-width: 720px){
            margin: auto;
         }
@@ -269,7 +272,7 @@ a{
         @include restmenu__text;
         &:hover{
             transition: width 0.3s ease-in-out;
-            width: 200px;
+            width: 190px;
             cursor: pointer;
         }    
     }
@@ -277,17 +280,16 @@ a{
     .checking{
         position: relative;
         top: -7.63em;
-        left: 330px;
+        left: 320px;
         width: 65px;
         height: 70px;
-        z-index: 1;
         opacity: 0;
         overflow: hidden;
         cursor: pointer;
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
         &:hover{
-            animation: checking_sliding 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+            animation: checking_sliding 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
         }
         @keyframes checking_sliding{
             0%{
@@ -295,7 +297,7 @@ a{
                 opacity: 1;
             }
             100%{
-                transform: translateX(-65px);
+                transform: translateX(-60px);
                 opacity: 1;
             
             }
@@ -341,16 +343,12 @@ a{
         }
         @keyframes price__sliding{
             0%{
-                transform: translateX(-30px);
-                margin-left: 1.5em;
-             
+                transform: translateX(-25px); 
             }
             100%{
                 transform: translateX(0);
-                margin-left: 0;
             }
         } 
-
     }
 
     .picture__menu{

@@ -283,6 +283,11 @@ a {
 .restmenu__mainheading {
   margin: 0 0.3em;
 }
+@media screen and (max-width: 320px) {
+  .restmenu__mainheading {
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 720px) {
   .restmenu__mainheading {
     margin: auto;
@@ -435,17 +440,16 @@ a {
 }
 .restmenu__text:hover {
   transition: width 0.3s ease-in-out;
-  width: 200px;
+  width: 190px;
   cursor: pointer;
 }
 
 .checking {
   position: relative;
   top: -7.63em;
-  left: 330px;
+  left: 320px;
   width: 65px;
   height: 70px;
-  z-index: 1;
   opacity: 0;
   overflow: hidden;
   cursor: pointer;
@@ -453,8 +457,8 @@ a {
   background: #99e2d0;
 }
 .checking:hover {
-  -webkit-animation: checking_sliding 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-          animation: checking_sliding 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  -webkit-animation: checking_sliding 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+          animation: checking_sliding 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
 @-webkit-keyframes checking_sliding {
   0% {
@@ -462,7 +466,7 @@ a {
     opacity: 1;
   }
   100% {
-    transform: translateX(-65px);
+    transform: translateX(-60px);
     opacity: 1;
   }
 }
@@ -472,7 +476,7 @@ a {
     opacity: 1;
   }
   100% {
-    transform: translateX(-65px);
+    transform: translateX(-60px);
     opacity: 1;
   }
 }
@@ -525,22 +529,18 @@ a {
 }
 @-webkit-keyframes price__sliding {
   0% {
-    transform: translateX(-30px);
-    margin-left: 1.5em;
+    transform: translateX(-25px);
   }
   100% {
     transform: translateX(0);
-    margin-left: 0;
   }
 }
 @keyframes price__sliding {
   0% {
-    transform: translateX(-30px);
-    margin-left: 1.5em;
+    transform: translateX(-25px);
   }
   100% {
     transform: translateX(0);
-    margin-left: 0;
   }
 }
 
