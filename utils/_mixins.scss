@@ -1,43 +1,54 @@
 @mixin cards{
     width: 340px;
-    height: 320px;
+    height: 300px;
     margin-bottom: 1.5em;
     background-color: white;
     border-radius: 3em;
     border:none;
-    /*@media screen and (min-width: 320px) and (max-width:374){
-        width: auto;
+    @media all and (min-width: 320px) and (max-width:374px){
+        width: 290px;
     }
-    @media all and (min-width: 380px) and (max-width:680px){
-        width: 305px;
-        height: 80%;
+    @media all and (min-width: 431px) and (max-width:720px){
+        width: 410px;
     }
-    @media screen and (min-width:720px){
-        width: 350px;
-        height: 350px;
-    }*/
+    @media all and (min-width: 1024px) and (max-width:1280px){
+        width: 430px;
+    }
+    @media screen and (min-width: 1440px){
+        width: 540px;
+    }
 }
 
 @mixin picturescards{
     width: 340px;
+    height: 220px;
     object-fit: cover;
+    object-position: center;
     border-radius: 3em 3em 0 0;
-    @media screen and (min-width: 320px) and (max-width:374){
-        width: auto;
+    @media all and (min-width: 320px) and (max-width:374px){
+        width: 290px;
     }
-    @media all and (min-width: 380px) and (max-width:680px){
-        width: 305px;
+    @media all and (min-width: 431px) and (max-width: 720px){
+        width: 410px;
+    }
+    @media all and (min-width: 1024px) and (max-width: 1280px){
+        width: 430px;
+    }
+}
 
+@mixin picturescards__XL{
+    @media screen and (min-width: 1440px){
+        width: 540px;
     }
-    @media screen and (min-width:720px){
-        width: 350px;
-        height: 73%;
-    }  
+    @media screen and (min-width:1600px){
+        width: 700px;
+        height: 310px;
+    }
 }
 
 @mixin rest__hicon{
     float: right;
-    margin: -1em 1em 0 auto;
+    margin: -.8em 1em 0 auto;
     font-size: 25px;
     text-align: center;
     &:hover{
@@ -48,7 +59,7 @@
 
 @mixin rest__hiconfull{
     float: right;
-    margin: -1em;
+    margin: -.8em -1em;
     display: block;
     font-size: 25px;
     opacity: 0;
@@ -74,7 +85,7 @@
 
 
 @mixin inputtowns{
-    @media screen and (max-width:320px){
+    @media screen and (max-width: 320px){
         position: relative;
         left: 27%;
         top: 1.9em;
@@ -89,6 +100,9 @@
 }
 
 @mixin btn{
+    @media all and (min-width: 320px) and (max-width:374px){
+        width: 290px;
+    }
     @media screen and (min-width:720px){
         width: 370px;
         font-size: 18px;
@@ -108,42 +122,54 @@
 }
 
 @mixin restnames__article{
-    @media screen and (max-width:320px){
+    @media all and (min-width: 320px) and (max-width:374px){
         width: 290px;
     }
 }
 
 @mixin restnames__newrest{
-    @media screen and (max-width:320px){
-        position: relative;
-        left: 195px;
+    @media all and (min-width: 320px) and (max-width:374px){
+        left: 195px;    
     }
-    @media screen and (min-width:720px){
-        position: relative;
-        top: -280px;
-        left: 255px;
+    @media all and (min-width: 380px) and (max-width:720px){
+        top: -240px;
+        left: 310px;
+    }
+    @media all and (min-width: 1024px) and (max-width:1280px){
+        left: 330px;
+    }
+}
+
+@mixin restnames__newrestXL{
+   @media all and (min-width:1440px) and (max-width:1599px){
+        left: 445px;
+   }
+   @media screen and (min-width:1600px){
+       top: -310px;
+       left: 600px;
     }
 }
 
 @mixin restmenu__text{
-    @media screen and (max-width:320px){
+    @media all and (min-width: 320px) and (max-width:374px){
         width: 200px;
     } 
 }
 
 @mixin restmenu__dishes{
-    @media screen and (max-width:320px){
+    @media all and (min-width: 320px) and (max-width:374px){
         width: 100%;
     }
     @media screen and (min-width:720px){
-        width: 40%;
+        width: 70%;
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 
 @mixin restmenu__desc{
-    @media screen and (max-width:320px){
+    @media all and (min-width: 320px) and (max-width:374px){
        font-size: 18px;
     }   
 }
@@ -155,14 +181,22 @@
 }
 
 @mixin functionnement__btn_L{
-    @media screen and (min-width:720px){
-        width: 390px;
+    @media screen and (min-width: 1024px){
+        width: 90%;
         margin: 1em auto; 
-        text-align: start;
-    }   
+        font-size: 25px;
+    }
+
 }
 
 @mixin heading {
+    @media screen and (max-width: 320px){
+        padding: 0;
+    }
+    @media all and (min-width: 321px) and (max-width:374px){
+        margin: 0;
+        padding: 1.2em 1.2em;
+    }
     @media screen and (min-width:720px){
         display: flex;
         justify-content: center;

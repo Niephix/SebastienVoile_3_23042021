@@ -25,13 +25,14 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin: .5em 0; 
+    margin: .5em .6em; 
     padding: 1em;
     border-radius: 2em 2em;
     border: none;
     box-shadow: 5px 5px 8px $color-functionnement__btn;
     font-size: 18px;
-    width: 300px;
+    width: 330px;
+    @include btn;
     @include functionnement__btn_L;
     &.functionnement__btn:hover{
         background: lighten($color-primary, $amount: 30);
