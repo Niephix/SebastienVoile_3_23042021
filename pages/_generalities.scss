@@ -31,6 +31,9 @@ body{
 .functionnement{
     margin-bottom: 2em;
     @extend %flex_center_column_bs;
+    @media screen and (min-width: 1024px){
+        flex-flow: row nowrap;
+    }    
 }
 
 .functionnement__num, .functionnement__num2{
@@ -47,12 +50,18 @@ body{
     @media all and (min-width: 320px) and (max-width:374px){
         margin-left: -2.2em;
     }
+    @media screen and (min-width: 1024px){
+        margin-left: -7.3em;
+    }
 }
 
 .functionnement__num2{
     margin-left: -5.8em;
     @media all and (min-width: 320px) and (max-width:374px){
         margin-left: -3em;
+    }
+    @media screen and (min-width: 1024px){
+        margin-left: -8.2em;
     }
 }
 
@@ -202,6 +211,7 @@ a{
     
     .restmenus__articles{
         @extend %flex_spaceevenly_bb;
+        
     }
 
     .restmenu__dishes1, .restmenu__dishes2, .restmenu__dishes3{
@@ -276,53 +286,24 @@ a{
         }
     }
     
-    .restemenu__desc{
-        margin: .5em 0 .5em .8em;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: auto;
-        @include restmenu__desc;
-    }
-
-    .restmenu__text{
-        width: 250px;
-        margin: 0 auto 1em .8em;
-        white-space: nowrap;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        @include restmenu__text;
-        &:hover{
-            transition: width 0.3s ease-in-out;
-            width: 190px;
-            cursor: pointer;
-        }    
-    }
-
-    .checking{
+    #checking{
         position: relative;
-        top: -7.63em;
+        top: -7.64em;
         left: 320px;
-        width: 65px;
+        margin-left: -20px;
+        width: 60px;
         height: 70px;
-        opacity: 0;
+        opacity: 1;
         overflow: hidden;
         cursor: pointer;
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
+        transform-origin: center;
+        transition: transform, opacity 4s ease-in-out;
         &:hover{
-            animation: checking_sliding 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+            transform: translateX(-33px);
+            opacity: 1;
         }
-        @keyframes checking_sliding{
-            0%{
-                transform: translateX(0);
-                opacity: 1;
-            }
-            100%{
-                transform: translateX(-60px);
-                opacity: 1;
-            
-            }
-        }         
     }
 
     .restmenu__check{
@@ -336,7 +317,6 @@ a{
         font-weight: 900;
         padding: .5em .6em .5em .6em;
         text-align: center;
-        transition: all 1s;
         &:hover{
             animation: check_sliding 1s ease-in-out both 1;
         }
@@ -351,25 +331,42 @@ a{
         }        
        
     }
+
+    .restemenu__dishes__entitled{
+        width: 100%;
+        &:hover{
+            width: 80%;
+        }
+    }
+
+    .entitled1{
+        margin: .5em 0 .5em .8em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: auto;
+        @include restmenu__desc;
+    }
+
+    .entitled2{
+        width: 250px;
+        margin: 0 0 1em 1em;
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        @include restmenu__text;
+        &:hover{
+            width: 150px;
+        }
+    }
     
     .price{
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
         align-content: flex-end;
-        margin: -2em 1.5em .5em 1.5em;
         height: 70px;
-        &:hover{
-            animation: price__sliding 2s ease-in-out both infinite;
-        }
-        @keyframes price__sliding{
-            0%{
-                transform: translateX(-25px); 
-            }
-            100%{
-                transform: translateX(0);
-            }
-        } 
+        margin: -2em 1.5em .5em 1.5em;
     }
 
     .picture__menu{

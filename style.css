@@ -107,6 +107,11 @@ body {
 .functionnement {
   margin-bottom: 2em;
 }
+@media screen and (min-width: 1024px) {
+  .functionnement {
+    flex-flow: row nowrap;
+  }
+}
 
 .functionnement__num, .functionnement__num2 {
   border-radius: 100%;
@@ -124,6 +129,11 @@ body {
     margin-left: -2.2em;
   }
 }
+@media screen and (min-width: 1024px) {
+  .functionnement__num {
+    margin-left: -7.3em;
+  }
+}
 
 .functionnement__num2 {
   margin-left: -5.8em;
@@ -131,6 +141,11 @@ body {
 @media all and (min-width: 320px) and (max-width: 374px) {
   .functionnement__num2 {
     margin-left: -3em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functionnement__num2 {
+    margin-left: -8.2em;
   }
 }
 
@@ -516,71 +531,24 @@ a {
     transform: translateY(0);
   }
 }
-.restemenu__desc {
-  margin: 0.5em 0 0.5em 0.8em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: auto;
-}
-@media all and (min-width: 320px) and (max-width: 374px) {
-  .restemenu__desc {
-    font-size: 18px;
-  }
-}
-
-.restmenu__text {
-  width: 250px;
-  margin: 0 auto 1em 0.8em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media all and (min-width: 320px) and (max-width: 374px) {
-  .restmenu__text {
-    width: 200px;
-  }
-}
-.restmenu__text:hover {
-  transition: width 0.3s ease-in-out;
-  width: 190px;
-  cursor: pointer;
-}
-
-.checking {
+#checking {
   position: relative;
-  top: -7.63em;
+  top: -7.64em;
   left: 320px;
-  width: 65px;
+  margin-left: -20px;
+  width: 60px;
   height: 70px;
-  opacity: 0;
+  opacity: 1;
   overflow: hidden;
   cursor: pointer;
   border-radius: 0 20px 20px 0;
   background: #99e2d0;
+  transform-origin: center;
+  transition: transform, opacity 4s ease-in-out;
 }
-.checking:hover {
-  -webkit-animation: checking_sliding 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-          animation: checking_sliding 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-}
-@-webkit-keyframes checking_sliding {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-60px);
-    opacity: 1;
-  }
-}
-@keyframes checking_sliding {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-60px);
-    opacity: 1;
-  }
+#checking:hover {
+  transform: translateX(-33px);
+  opacity: 1;
 }
 
 .restmenu__check {
@@ -594,7 +562,6 @@ a {
   font-weight: 900;
   padding: 0.5em 0.6em 0.5em 0.6em;
   text-align: center;
-  transition: all 1s;
 }
 .restmenu__check:hover {
   -webkit-animation: check_sliding 1s ease-in-out both 1;
@@ -617,33 +584,49 @@ a {
   }
 }
 
+.restemenu__dishes__entitled {
+  width: 100%;
+}
+.restemenu__dishes__entitled:hover {
+  width: 80%;
+}
+
+.entitled1 {
+  margin: 0.5em 0 0.5em 0.8em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: auto;
+}
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .entitled1 {
+    font-size: 18px;
+  }
+}
+
+.entitled2 {
+  width: 250px;
+  margin: 0 0 1em 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .entitled2 {
+    width: 200px;
+  }
+}
+.entitled2:hover {
+  width: 150px;
+}
+
 .price {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-content: flex-end;
-  margin: -2em 1.5em 0.5em 1.5em;
   height: 70px;
-}
-.price:hover {
-  -webkit-animation: price__sliding 2s ease-in-out both infinite;
-          animation: price__sliding 2s ease-in-out both infinite;
-}
-@-webkit-keyframes price__sliding {
-  0% {
-    transform: translateX(-25px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes price__sliding {
-  0% {
-    transform: translateX(-25px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  margin: -2em 1.5em 0.5em 1.5em;
 }
 
 .picture__menu {
@@ -663,7 +646,7 @@ a {
   }
 }
 
-.choices__heading, .choices__text, .functionnement__btn, .describe__heading, .explain__heading, .restnames__heading, .restnames__text, .restnames__textbis, .restnames__newrest, .restemnu__title, .restemenu__desc, .restmenu__text, .btn--command, footer li {
+.choices__heading, .choices__text, .functionnement__btn, .describe__heading, .explain__heading, .restnames__heading, .restnames__text, .restnames__textbis, .restnames__newrest, .restemnu__title, .entitled1, .entitled2, .btn--command, footer li {
   font-family: "Roboto", sans-serif;
 }
 
@@ -740,7 +723,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .functionnement__btn {
-    width: 90%;
+    width: 30%;
     margin: 1em auto;
     font-size: 25px;
   }
