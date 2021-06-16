@@ -211,6 +211,10 @@ a{
     
     .restmenus__articles{
         @extend %flex_spaceevenly_bb;
+        width: 100%;
+        &:active{
+            width: 95%;
+        }
         
     }
 
@@ -288,20 +292,20 @@ a{
     
     #checking{
         position: relative;
-        top: -7.64em;
-        left: 320px;
+        top: -7.7em;
+        left: 330px;
         margin-left: -20px;
         width: 60px;
-        height: 70px;
-        opacity: 1;
+        height: 71px;
+        opacity: 0;
         overflow: hidden;
         cursor: pointer;
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
         transform-origin: center;
-        transition: transform, opacity 4s ease-in-out;
+        transition: transform, opacity 2s ease-in-out;
         &:hover{
-            transform: translateX(-33px);
+            transform: translateX(-43px);
             opacity: 1;
         }
     }
@@ -328,12 +332,12 @@ a{
             100%{
                 transform: rotate(0);
             }
-        }        
-       
+        }          
     }
 
     .restemenu__dishes__entitled{
         width: 100%;
+        text-overflow: ellipsis;
         &:hover{
             width: 80%;
         }
@@ -344,19 +348,21 @@ a{
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        width: auto;
         @include restmenu__desc;
+        &:hover{
+            width: 80%;
+        }
     }
 
     .entitled2{
-        width: 250px;
+        width: 70%;
         margin: 0 0 1em 1em;
         white-space: nowrap;
         overflow:hidden;
         text-overflow: ellipsis;
         @include restmenu__text;
         &:hover{
-            width: 150px;
+            width: 60%;
         }
     }
     
@@ -366,6 +372,7 @@ a{
         justify-content: flex-end;
         align-content: flex-end;
         height: 70px;
+        overflow: hidden;
         margin: -2em 1.5em .5em 1.5em;
     }
 
