@@ -434,9 +434,6 @@ a {
 .restmenus__articles {
   width: 100%;
 }
-.restmenus__articles:active {
-  width: 95%;
-}
 
 .restmenu__dishes1, .restmenu__dishes2, .restmenu__dishes3 {
   width: 100%;
@@ -454,7 +451,7 @@ a {
 }
 @media screen and (min-width: 720px) {
   .restmenu__dishes1, .restmenu__dishes2, .restmenu__dishes3 {
-    width: 70%;
+    width: 30%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -541,8 +538,8 @@ a {
 #checking {
   position: relative;
   top: -7.7em;
-  left: 330px;
-  margin-left: -20px;
+  left: 135px;
+  right: 135px;
   width: 60px;
   height: 71px;
   opacity: 0;
@@ -550,12 +547,34 @@ a {
   cursor: pointer;
   border-radius: 0 20px 20px 0;
   background: #99e2d0;
-  transform-origin: center;
-  transition: transform, opacity 2s ease-in-out;
 }
-#checking:hover {
-  transform: translateX(-43px);
-  opacity: 1;
+#checking:active {
+  -webkit-animation: checking_sliding 2s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+          animation: checking_sliding 2s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+@-webkit-keyframes checking_sliding {
+  0% {
+    left: 270px;
+    opacity: 1;
+  }
+  100% {
+    left: 270px;
+    opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+@keyframes checking_sliding {
+  0% {
+    left: 270px;
+    opacity: 1;
+  }
+  100% {
+    left: 270px;
+    opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
 }
 
 .restmenu__check {
@@ -570,9 +589,9 @@ a {
   padding: 0.5em 0.6em 0.5em 0.6em;
   text-align: center;
 }
-.restmenu__check:hover {
-  -webkit-animation: check_sliding 1s ease-in-out both 1;
-          animation: check_sliding 1s ease-in-out both 1;
+.restmenu__check:active {
+  -webkit-animation: check_sliding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 1;
+          animation: check_sliding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 1;
 }
 @-webkit-keyframes check_sliding {
   0% {
@@ -592,10 +611,9 @@ a {
 }
 
 .restemenu__dishes__entitled {
-  width: 100%;
   text-overflow: ellipsis;
 }
-.restemenu__dishes__entitled:hover {
+.restemenu__dishes__entitled:active {
   width: 80%;
 }
 
@@ -610,9 +628,6 @@ a {
     font-size: 18px;
   }
 }
-.entitled1:hover {
-  width: 80%;
-}
 
 .entitled2 {
   width: 70%;
@@ -625,9 +640,6 @@ a {
   .entitled2 {
     width: 200px;
   }
-}
-.entitled2:hover {
-  width: 60%;
 }
 
 .price {

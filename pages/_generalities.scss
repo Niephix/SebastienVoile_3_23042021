@@ -212,10 +212,6 @@ a{
     .restmenus__articles{
         @extend %flex_spaceevenly_bb;
         width: 100%;
-        &:active{
-            width: 95%;
-        }
-        
     }
 
     .restmenu__dishes1, .restmenu__dishes2, .restmenu__dishes3{
@@ -293,8 +289,8 @@ a{
     #checking{
         position: relative;
         top: -7.7em;
-        left: 330px;
-        margin-left: -20px;
+        left: 135px;
+        right: 135px;
         width: 60px;
         height: 71px;
         opacity: 0;
@@ -302,11 +298,19 @@ a{
         cursor: pointer;
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
-        transform-origin: center;
-        transition: transform, opacity 2s ease-in-out;
-        &:hover{
-            transform: translateX(-43px);
-            opacity: 1;
+        &:active{
+            animation: checking_sliding 2s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+        }
+        @keyframes checking_sliding{
+            0%{
+                left: 270px;
+                opacity: 1;
+            }
+            100%{
+                left: 270px;
+                opacity: 1; 
+                animation-play-state: paused;
+            }
         }
     }
 
@@ -321,8 +325,8 @@ a{
         font-weight: 900;
         padding: .5em .6em .5em .6em;
         text-align: center;
-        &:hover{
-            animation: check_sliding 1s ease-in-out both 1;
+        &:active{
+            animation: check_sliding 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards 1;
         }
         @keyframes check_sliding{
             0%{
@@ -336,9 +340,8 @@ a{
     }
 
     .restemenu__dishes__entitled{
-        width: 100%;
         text-overflow: ellipsis;
-        &:hover{
+        &:active{
             width: 80%;
         }
     }
@@ -349,9 +352,6 @@ a{
         overflow: hidden;
         white-space: nowrap;
         @include restmenu__desc;
-        &:hover{
-            width: 80%;
-        }
     }
 
     .entitled2{
@@ -361,9 +361,6 @@ a{
         overflow:hidden;
         text-overflow: ellipsis;
         @include restmenu__text;
-        &:hover{
-            width: 60%;
-        }
     }
     
     .price{
