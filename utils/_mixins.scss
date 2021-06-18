@@ -226,7 +226,6 @@
 }
 
 @mixin checking__sliders{
-    top: -7.6em; 
     @media screen and (max-width: 320px){
         left: 110px;
         @keyframes checking_sliding{

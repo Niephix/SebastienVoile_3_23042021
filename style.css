@@ -538,45 +538,16 @@ a {
 }
 #checking {
   position: relative;
-  top: -7.7em;
+  top: -4.4em;
   left: 135px;
   right: 135px;
   width: 60px;
   height: 70px;
-  opacity: 0;
+  opacity: 1;
   overflow: hidden;
   cursor: pointer;
   border-radius: 0 20px 20px 0;
   background: #99e2d0;
-  top: -7.6em;
-}
-#checking:active {
-  -webkit-animation: checking_sliding 2s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-          animation: checking_sliding 2s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-}
-@-webkit-keyframes checking_sliding {
-  0% {
-    left: 270px;
-    opacity: 1;
-  }
-  100% {
-    left: 270px;
-    opacity: 1;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-}
-@keyframes checking_sliding {
-  0% {
-    left: 270px;
-    opacity: 1;
-  }
-  100% {
-    left: 270px;
-    opacity: 1;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
 }
 @media screen and (max-width: 320px) {
   #checking {
@@ -702,6 +673,10 @@ a {
     }
   }
 }
+#checking:hover {
+  -webkit-animation: checking_sliding 2s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+          animation: checking_sliding 2s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
 
 .restmenu__check {
   color: #99e2d0;
@@ -715,9 +690,35 @@ a {
   padding: 0.5em 0.6em 0.5em 0.6em;
   text-align: center;
 }
-.restmenu__check:active {
+.restmenu__check:hover {
   -webkit-animation: check_sliding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 1;
           animation: check_sliding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 1;
+}
+
+@-webkit-keyframes checking_sliding {
+  0% {
+    left: 270px;
+    opacity: 1;
+  }
+  100% {
+    left: 270px;
+    opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@keyframes checking_sliding {
+  0% {
+    left: 270px;
+    opacity: 1;
+  }
+  100% {
+    left: 270px;
+    opacity: 1;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
 }
 @-webkit-keyframes check_sliding {
   0% {
@@ -735,15 +736,14 @@ a {
     transform: rotate(0);
   }
 }
-
 .restemenu__dishes__entitled {
+  overflow: hidden;
   text-overflow: ellipsis;
-}
-.restemenu__dishes__entitled:active {
-  width: 85%;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (max-width: 320px) and (max-width: 374px) {
-  .restemenu__dishes__entitled:active {
+  .restemenu__dishes__entitled {
     width: 55%;
   }
 }
@@ -778,7 +778,6 @@ a {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-content: flex-end;
-  height: 70px;
   overflow: hidden;
   margin: -2em 1.5em 0.5em 1.5em;
 }
