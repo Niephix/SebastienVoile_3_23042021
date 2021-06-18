@@ -160,8 +160,13 @@
     @media all and (min-width: 320px) and (max-width:374px){
         width: 100%;
     }
-    @media screen and (min-width:720px){
-        width: 30%;
+
+    @media all and (min-width: 376px) and (max-width:719px){
+        width: 363px;
+    }
+
+    @media screen and (min-width: 720px){
+        width: 450px;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -217,5 +222,76 @@
         flex-flow: row nowrap;
         justify-content: space-around;
         align-content: center;
+    }
+}
+
+@mixin checking__sliders{
+    top: -7.6em; 
+    @media screen and (max-width: 320px){
+        left: 110px;
+        @keyframes checking_sliding{
+            0%{
+                left: 220px;
+                opacity: 1;
+            }
+            100%{
+                left: 220px;
+                opacity: 1;
+            }
+        }
+    }
+    @media screen and (min-width: 321px) and (max-width: 374px){
+        left: 125px;
+        @keyframes checking_sliding{
+            0%{
+                left: 252px;
+                opacity: 1;
+            }
+            100%{
+                left: 252px;
+                opacity: 1;
+            }   
+        }
+    }
+    
+    @media screen and (min-width: 400px) and (max-width:720px){
+        left: 150px;
+        right: 150px;
+        @keyframes checking_sliding{
+            0%{
+                left: 306px;
+                opacity: 1;
+            }
+            100%{
+                left: 306px;
+                opacity: 1;
+            }
+        }
+    }
+    @media screen and (min-width:720px){
+        left: 210px;
+        right: 210px;
+        @keyframes checking_sliding{
+            0%{
+                left: 390px;
+                opacity: 1;
+            }
+            100%{
+                left: 390px;
+                opacity: 1;
+            }
+        }
+    }
+    @media screen and (min-width: 1580px){
+        @keyframes checking_sliding{
+            0%{
+                left: 389px;
+                opacity: 1;
+            }
+            100%{
+                left: 389px;
+                opacity: 1;
+            }
+        }
     }
 }

@@ -190,7 +190,7 @@ a{
            margin: auto;
         }
     }
-
+    
     .restemnu__title{
         margin: 1.5em 0 .2em .3em;
         @media screen and (min-width:720px){
@@ -211,7 +211,6 @@ a{
     
     .restmenus__articles{
         @extend %flex_spaceevenly_bb;
-        width: 100%;
     }
 
     .restmenu__dishes1, .restmenu__dishes2, .restmenu__dishes3{
@@ -292,7 +291,7 @@ a{
         left: 135px;
         right: 135px;
         width: 60px;
-        height: 71px;
+        height: 70px;
         opacity: 0;
         overflow: hidden;
         cursor: pointer;
@@ -312,6 +311,7 @@ a{
                 animation-play-state: paused;
             }
         }
+        @include checking__sliders;
     }
 
     .restmenu__check{
@@ -342,16 +342,20 @@ a{
     .restemenu__dishes__entitled{
         text-overflow: ellipsis;
         &:active{
-            width: 80%;
+            width: 85%;
+            @media screen and (max-width: 320px) and (max-width: 374px){
+                width: 55%;
+            }
         }
     }
+
 
     .entitled1{
         margin: .5em 0 .5em .8em;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        @include restmenu__desc;
+        @include restmenu__desc;       
     }
 
     .entitled2{
