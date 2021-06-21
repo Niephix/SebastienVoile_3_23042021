@@ -1,131 +1,143 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-#main{
-   overflow: hidden;
+#main {
+    overflow: hidden;
 }
 
-.header__arrowback{
+.header__arrowback {
     margin-right: 0.5em;
-    @media screen and (min-width:500px){
+
+    @media screen and (min-width:500px) {
         display: none;
     }
-    & .fas{
+
+    & .fas {
         color: black;
     }
 }
 
-.choices__text{
+.choices__text {
     font-size: 20px;
     text-align: center;
     margin-bottom: 1.8em;
 }
 
-.explain__heading{
+.explain__heading {
     margin: 1.2em .6em;
     @include heading;
 }
 
-.functionnement{
+.functionnement {
     margin-bottom: 2em;
     @extend %flex_center_column_bs;
-    @media screen and (min-width: 1024px){
+
+    @media screen and (min-width: 1024px) {
         flex-flow: row nowrap;
-    }    
+    }
 }
 
-.functionnement__num, .functionnement__num2{
+.functionnement__num,
+.functionnement__num2 {
     @extend %flexstart;
     border-radius: 100%;
     background-color: $color-primary;
-    color: $color-bgarticle; 
+    color: $color-bgarticle;
     font-size: 14px;
     padding: 0.5em 0.8em 0.5em 0.8em;
 }
 
-.functionnement__num{
+.functionnement__num {
     margin-left: -5em;
-    @media all and (min-width: 320px) and (max-width:374px){
+
+    @media all and (min-width: 320px) and (max-width:374px) {
         margin-left: -2.2em;
     }
-    @media all and (min-width: 720px) and (max-width:1023px){
+
+    @media all and (min-width: 720px) and (max-width:1023px) {
         margin-left: -8.3em;
     }
-    @media screen and (min-width: 1024px){
+
+    @media screen and (min-width: 1024px) {
         margin-left: -4.1em;
     }
 
 }
 
-.functionnement__num2{
+.functionnement__num2 {
     margin-left: -5.8em;
-    @media all and (min-width: 320px) and (max-width:374px){
+
+    @media all and (min-width: 320px) and (max-width:374px) {
         margin-left: -3em;
     }
-    @media all and (min-width: 720px) and (max-width:1023px){
+
+    @media all and (min-width: 720px) and (max-width:1023px) {
         margin-left: -9.3em;
     }
-    @media screen and (min-width: 1024px){
+
+    @media screen and (min-width: 1024px) {
         margin-left: -5.2em;
     }
 }
 
-.functionnement__text{
+.functionnement__text {
     text-align: center;
 }
 
-.functionnement__icon{
+.functionnement__icon {
     text-align: center;
     margin: 0 1em;
     font-weight: bold;
     color: gray;
 }
 
-.describe__heading{
+.describe__heading {
     margin: 0;
     padding: 2em .6em 1em .6em;
     @include heading;
 }
 
-.restnames{
+.restnames {
     background-color: $color-bgrestname;
     padding-bottom: 2.5em;
 }
 
-.article{
+.article {
     @extend %flex_spaceevenly_bb;
     padding: 0 0.6em;
 }
 
-.restnames__heading{
+.restnames__heading {
     font-size: 20px;
     color: black;
-    margin: .5em 0 0 1.2em; 
-    @media all and (min-width: 380px) and (max-width:680px){
+    margin: .5em 0 0 1.2em;
+
+    @media all and (min-width: 380px) and (max-width:680px) {
         margin: .5em 0 0 1.2em;
     }
 }
 
-.restnames__article{
+.restnames__article {
     @include cards;
     @include restnames__article;
-    @media screen and (min-width:1600px){
+
+    @media screen and (min-width:1600px) {
         width: 700px;
         height: 390px;
     }
 }
 
-.rest__picture{
+.rest__picture {
     @include picturescards;
     @include picturescards__XL;
 
 }
 
-.restnames__newrest{
+.restnames__newrest {
     display: inline-block;
-    border:none;
+    border: none;
     background-color: $color-bgnewrest;
     color: $color-textnew;
     font-weight: bold;
@@ -134,261 +146,286 @@ body{
     top: -235px;
     left: 240px;
     margin: 0;
-    @include restnames__newrest; 
+    @include restnames__newrest;
     @include restnames__newrestXL;
 }
 
-.restnames__text{
+.restnames__text {
     margin: -1.5em auto auto 1.5em;
-    @media all and (min-width: 380px) and (max-width:680px){
+
+    @media all and (min-width: 380px) and (max-width:680px) {
         margin: -1.5em auto auto 1.5em;
     }
 }
 
-.restnames__textbis{
+.restnames__textbis {
     margin: 0.4em 2em 0 1.5em;
 }
-  
-.restnames__hicon{
+
+.restnames__hicon {
     @include rest__hicon;
 }
 
-.restnames__hiconfull{
+.restnames__hiconfull {
     @include rest__hiconfull;
 }
 
-.restnames__hicon--position{
+.restnames__hicon--position {
     position: relative;
     top: 1em;
-    @media screen and (min-width: 500px){
+
+    @media screen and (min-width: 500px) {
         left: 1em;
     }
 }
 
-.restnames__hiconfull--position{
+.restnames__hiconfull--position {
     position: relative;
     top: 1em;
-    @media screen and (min-width: 500px){
-       left: 1em;
+
+    @media screen and (min-width: 500px) {
+        left: 1em;
     }
 }
 
-a{
+a {
     text-decoration: none;
 }
-  
-.restmenu{
+
+.restmenu {
     @extend %flex_spaceevenly;
     margin: -2em 0;
-    padding: 1.8em 1em ;
+    padding: 1.8em 1em;
     border-radius: 35px 35px 0 0;
     background-color: $color-bgrestname;
 }
 
-    .restmenu__mainheading{
-        margin: 0 .3em;
-        @media screen and (max-width:320px){
-            font-size: 20px;
-        }
-        @media screen and (min-width: 500px){
-           margin: auto;
-        }
-    }
-    
-    .restemnu__title{
-        margin: 1.5em 0 .2em .3em;
-        @media screen and (min-width:720px){
-            margin: 1.5em auto .2em;
-        }
-    }
-    
-    .restemnu__title__underline{
-        background-color: $color-tertiary;
-        padding: .2em 0;
-        border-radius: 20px;
-        margin-left: .5em;
-        width: 15%;
-        @media screen and (min-width:720px){
-            margin: .2em auto;
-        }
-    }
-    
-    .restmenus__articles{
-        @extend %flex_spaceevenly_bb;
+.restmenu__mainheading {
+    margin: 0 .3em;
+
+    @media screen and (max-width:320px) {
+        font-size: 20px;
     }
 
-    .restmenu__dishes1, .restmenu__dishes2, .restmenu__dishes3{
-        @include menu;
-        text-overflow: ellipsis;
-        box-shadow: 3px 3px 6px gray;
-        @include restmenu__dishes;
-        cursor: pointer;
-        &:hover{
-            &:hover #checking{
-                transition: all 0.4s linear;
-                transform: translateX(-63px);
-                opacity: 1;
-            }
-            &:hover .restmenu__check{
-                transition: all 0.4s linear;
-                opacity: 1; 
-                transform: rotate(360deg); 
-            }
-            &:hover .restemenu__dishes__entitled{
-                transition: width linear;
-                width: 83%;
-                @media all and (min-width: 320px) and (max-width:374px){
-                    width: 85%;
-                }
-                @media screen and (min-width:380px){
-                    width: 87%;
-                }
-            }
-            &:hover .entitled2, &:hover .entitled1{
-                @media all and (min-width: 320px) and (max-width:374px){
-                    width: 65%;
-                }
-            }
-        }   
+    @media screen and (min-width: 500px) {
+        margin: auto;
     }
+}
 
-    .restmenu__dishes1{
-        animation: restmenus__articles_apparitions 1s linear backwards 1 normal;
+.restemnu__title {
+    margin: 1.5em 0 .2em .3em;
+
+    @media screen and (min-width:720px) {
+        margin: 1.5em auto .2em;
     }
-    @keyframes restmenus__articles_apparitions{
-        0%{
-            transform: translateY(-1.5em);
-            opacity: 0;
-        }
+}
 
-        25%{
-            transform: translateY(-1em);
+.restemnu__title__underline {
+    background-color: $color-tertiary;
+    padding: .2em 0;
+    border-radius: 20px;
+    margin-left: .5em;
+    width: 15%;
+
+    @media screen and (min-width:720px) {
+        margin: .2em auto;
+    }
+}
+
+.restmenus__articles {
+    @extend %flex_spaceevenly_bb;
+}
+
+.restmenu__dishes1,
+.restmenu__dishes2,
+.restmenu__dishes3 {
+    @include menu;
+    text-overflow: ellipsis;
+    box-shadow: 3px 3px 6px gray;
+    @include restmenu__dishes;
+    cursor: pointer;
+
+    &:hover {
+        &:hover #checking {
+            transition: all 0.4s linear;
+            transform: translateX(-63px);
             opacity: 1;
+            @media screen and (max-width: 320px) {
+                transform: translateX(-55px);
+            }
         }
 
-        50%{
-            transform: translateY(-.5em);
-        }
-
-        100%{
-            transform: translateY(0);
-        }
-    }
-
-    .restmenu__dishes2{
-        animation: restmenus__articles_apparitions 1s 0.3s ease-out backwards 1 normal;
-    }
-    @keyframes restmenus__articles_apparitions{
-        0%{
-            transform: translateY(-1em);
-            opacity: 0;
-        }
-
-        50%{
-            transform: translateY(-.5em);
+        &:hover .restmenu__check {
+            transition: all 0.4s linear;
             opacity: 1;
+            transform: rotate(360deg);
         }
 
-        100%{
-            transform: translateY(0);
-        }
-    }
+        &:hover .restemenu__dishes__entitled {
+            transition: width 0.4s linear;
+            width: 83%;
 
-    .restmenu__dishes3{
-        animation: restmenus__articles_apparitions 1s 0.5s linear backwards 1 normal;
-    }
-    @keyframes restmenus__articles_apparitions{
-        0%{
-            transform: translateY(-1.5em);
-            opacity: 0;
-        }
+            @media all and (min-width: 320px) and (max-width:374px) {
+                width: 85%;
+            }
 
-        25%{
-            transform: translateY(-1em);
-            opacity: 1;
+            @media screen and (min-width:380px) {
+                width: 87%;
+            }
         }
 
-        50%{
-            transform: translateY(-.5em);
-        }
+        &:hover .entitled1,
+        &:hover .entitled2 {
+            transition: width 0.4s linear;
 
-        100%{
-            transform: translateY(0);
+            @media all and (min-width: 320px) and (max-width:375px) {
+                width: 160px;
+            }
         }
     }
+}
 
-    .restemenu__dishes__entitled{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-        height: 100%;           
-    }
-    
-    #checking{
-        position: relative;
-        top: -4.4em;
-        left: 330px;
-        right: 0;
-        width: 60px;
-        height: 70px;
+.restmenu__dishes1 {
+    animation: restmenus__articles_apparitions 1s linear backwards 1 normal;
+}
+
+@keyframes restmenus__articles_apparitions {
+    0% {
+        transform: translateY(-1.5em);
         opacity: 0;
-        overflow: hidden;
-        cursor: pointer;
-        border-radius: 0 20px 20px 0;
-        background: $color-tertiary;
-        @include checking__sliders;     
     }
 
-    .restmenu__check{
-        color: $color-tertiary;
-        position: absolute;
-        top: 1em;
-        left: .6em;
-        background: white;
-        border-radius: $circle;
-        font-size: 18px;
-        font-weight: 900;
-        padding: .5em .6em .5em .6em;
-        text-align: center;
-    }           
-   
-    .entitled1{
-        margin: .5em 0 .5em .8em;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        width: 200px;
-        /*@include restmenu_name;*/
+    25% {
+        transform: translateY(-1em);
+        opacity: 1;
     }
 
-    .entitled2{
-        margin: 0 0 1em 1em;
-        white-space: nowrap;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        width: 200px;
-        /*@include restmenu__text;*/
-    }
-    
-    .price{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        align-content: flex-end;
-        overflow: hidden;
-        margin: -2em 1.5em .5em 1.5em;
+    50% {
+        transform: translateY(-.5em);
     }
 
-    .picture__menu{
-        position: relative;
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.restmenu__dishes2 {
+    animation: restmenus__articles_apparitions 1s 0.3s ease-out backwards 1 normal;
+}
+
+@keyframes restmenus__articles_apparitions {
+    0% {
+        transform: translateY(-1em);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-.5em);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.restmenu__dishes3 {
+    animation: restmenus__articles_apparitions 1s 0.5s linear backwards 1 normal;
+}
+
+@keyframes restmenus__articles_apparitions {
+    0% {
+        transform: translateY(-1.5em);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(-1em);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-.5em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.restemenu__dishes__entitled {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 100%;
+}
+
+#checking {
+    position: relative;
+    top: -4.4em;
+    left: 330px;
+    right: 0;
+    width: 60px;
+    height: 70px;
+    opacity: 0;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    background: $color-tertiary;
+    @include checking__sliders;
+}
+
+.restmenu__check {
+    color: $color-tertiary;
+    position: absolute;
+    top: 1em;
+    left: .6em;
+    background: white;
+    border-radius: $circle;
+    font-size: 18px;
+    font-weight: 900;
+    padding: .5em .6em .5em .6em;
+    text-align: center;
+}
+
+.entitled1 {
+    margin: .5em 0 .5em .8em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 290px;
+    @include restmenu__name;
+}
+
+.entitled2 {
+    margin: 0 0 1em 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    @include restmenu__text;
+}
+
+.price {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    overflow: hidden;
+    margin: -2em 1.5em .5em 1.5em;
+}
+
+.picture__menu {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-image: fixed no-repeat top center;
+    z-index: -3;
+
+    @media screen and (min-width:720px) {
+        background-position: center;
         width: 100%;
-        height: 250px;
-        object-fit: cover;
-        background-image: fixed no-repeat top center;
-        z-index: -3;
-        @media screen and (min-width:720px){
-            background-position: center;
-            width: 100%;
-            height: 400px;
-        }
+        height: 400px;
     }
+}

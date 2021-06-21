@@ -18,6 +18,7 @@
 .btn--command{
     margin: 1.5em auto;
     @include btn;
+    font-weight: bold;
 }
 
 .functionnement__btn{
