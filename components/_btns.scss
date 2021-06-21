@@ -32,9 +32,13 @@
     box-shadow: 5px 5px 8px $color-functionnement__btn;
     font-size: 18px;
     width: 330px;
+    cursor: pointer;
     @include btn;
     @include functionnement__btn_L;
     &.functionnement__btn:hover{
         background: lighten($color-primary, $amount: 30);
+        &:hover .functionnement__icon{
+            color: $color-primary;
+        }
     }
 }

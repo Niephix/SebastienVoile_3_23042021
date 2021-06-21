@@ -74,9 +74,6 @@ body{
     margin: 0 1em;
     font-weight: bold;
     color: gray;
-    :hover{
-        color: $color-primary;
-    }
 }
 
 .describe__heading{
@@ -218,7 +215,23 @@ a{
         text-overflow: ellipsis;
         box-shadow: 3px 3px 6px gray;
         @include restmenu__dishes;
-        
+        cursor: pointer;
+        &:hover{
+            &:hover #checking{
+                transition: all 0.4s linear;
+                transform: translateX(-63px);
+                opacity: 1;
+            }
+            &:hover .restmenu__check{
+                transition: all 0.4s linear;
+                opacity: 1; 
+                transform: rotate(360deg); 
+            }
+            &:hover .restemenu__dishes__entitled{
+                transition: width linear;
+                width: 83%;
+            }
+        }   
     }
 
     .restmenu__dishes1{
@@ -285,23 +298,32 @@ a{
             transform: translateY(0);
         }
     }
+
+    .restemenu__dishes__entitled{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        height: 100%;
+            /*@media screen and (max-width: 320px) and (max-width: 374px){
+                &:hover{
+                    width: 60%;
+                }
+            }*/              
+    }
     
     #checking{
         position: relative;
         top: -4.4em;
-        left: 135px;
-        right: 135px;
+        left: 330px;
+        right: 0;
         width: 60px;
         height: 70px;
-        opacity: 1;
+        opacity: 0;
         overflow: hidden;
         cursor: pointer;
         border-radius: 0 20px 20px 0;
         background: $color-tertiary;
-        @include checking__sliders;
-        &:hover{
-            animation: checking_sliding 2s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
-        }
+        @include checking__sliders;     
     }
 
     .restmenu__check{
@@ -315,43 +337,8 @@ a{
         font-weight: 900;
         padding: .5em .6em .5em .6em;
         text-align: center;
-        &:hover{
-            animation: check_sliding 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards 1;
-        }   
-    }
+    }           
    
-    @keyframes checking_sliding{
-        0%{
-            left: 270px;
-            opacity: 1;
-        }
-        100%{
-            left: 270px;
-            opacity: 1; 
-            animation-play-state: paused;
-        }
-    }
-
-    @keyframes check_sliding{
-        0%{
-            transform: rotate(360deg);
-        }
-        
-        100%{
-            transform: rotate(0);
-        }
-    }
-
-    .restemenu__dishes__entitled{
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-        height: 100%;
-            @media screen and (max-width: 320px) and (max-width: 374px){
-                width: 55%;
-            }
-    }
-
     .entitled1{
         margin: .5em 0 .5em .8em;
         text-overflow: ellipsis;

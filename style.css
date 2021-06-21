@@ -159,9 +159,6 @@ body {
   font-weight: bold;
   color: gray;
 }
-.functionnement__icon :hover {
-  color: #9356dc;
-}
 
 .describe__heading {
   margin: 0;
@@ -439,6 +436,7 @@ a {
   border-radius: 20px 20px 20px 20px;
   text-overflow: ellipsis;
   box-shadow: 3px 3px 6px gray;
+  cursor: pointer;
 }
 @media all and (min-width: 320px) and (max-width: 374px) {
   .restmenu__dishes1, .restmenu__dishes2, .restmenu__dishes3 {
@@ -457,6 +455,20 @@ a {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+}
+.restmenu__dishes1:hover:hover #checking, .restmenu__dishes2:hover:hover #checking, .restmenu__dishes3:hover:hover #checking {
+  transition: all 0.4s linear;
+  transform: translateX(-63px);
+  opacity: 1;
+}
+.restmenu__dishes1:hover:hover .restmenu__check, .restmenu__dishes2:hover:hover .restmenu__check, .restmenu__dishes3:hover:hover .restmenu__check {
+  transition: all 0.4s linear;
+  opacity: 1;
+  transform: rotate(360deg);
+}
+.restmenu__dishes1:hover:hover .restemenu__dishes__entitled, .restmenu__dishes2:hover:hover .restemenu__dishes__entitled, .restmenu__dishes3:hover:hover .restemenu__dishes__entitled {
+  transition: width linear;
+  width: 83%;
 }
 
 .restmenu__dishes1 {
@@ -536,14 +548,26 @@ a {
     transform: translateY(0);
   }
 }
+.restemenu__dishes__entitled {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 100%;
+  /*@media screen and (max-width: 320px) and (max-width: 374px){
+      &:hover{
+          width: 60%;
+      }
+  }*/
+}
+
 #checking {
   position: relative;
   top: -4.4em;
-  left: 135px;
-  right: 135px;
+  left: 330px;
+  right: 0;
   width: 60px;
   height: 70px;
-  opacity: 1;
+  opacity: 0;
   overflow: hidden;
   cursor: pointer;
   border-radius: 0 20px 20px 0;
@@ -673,10 +697,6 @@ a {
     }
   }
 }
-#checking:hover {
-  -webkit-animation: checking_sliding 2s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-          animation: checking_sliding 2s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-}
 
 .restmenu__check {
   color: #99e2d0;
@@ -689,63 +709,6 @@ a {
   font-weight: 900;
   padding: 0.5em 0.6em 0.5em 0.6em;
   text-align: center;
-}
-.restmenu__check:hover {
-  -webkit-animation: check_sliding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 1;
-          animation: check_sliding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 1;
-}
-
-@-webkit-keyframes checking_sliding {
-  0% {
-    left: 270px;
-    opacity: 1;
-  }
-  100% {
-    left: 270px;
-    opacity: 1;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-}
-
-@keyframes checking_sliding {
-  0% {
-    left: 270px;
-    opacity: 1;
-  }
-  100% {
-    left: 270px;
-    opacity: 1;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-}
-@-webkit-keyframes check_sliding {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-@keyframes check_sliding {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-.restemenu__dishes__entitled {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  height: 100%;
-}
-@media screen and (max-width: 320px) and (max-width: 374px) {
-  .restemenu__dishes__entitled {
-    width: 55%;
-  }
 }
 
 .entitled1 {
@@ -861,6 +824,7 @@ a {
   box-shadow: 5px 5px 8px #f2f2f2;
   font-size: 18px;
   width: 330px;
+  cursor: pointer;
 }
 @media all and (min-width: 320px) and (max-width: 374px) {
   .functionnement__btn {
@@ -883,6 +847,9 @@ a {
 }
 .functionnement__btn.functionnement__btn:hover {
   background: #e4d5f6;
+}
+.functionnement__btn.functionnement__btn:hover:hover .functionnement__icon {
+  color: #9356dc;
 }
 
 .loading__content {
