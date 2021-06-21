@@ -67,7 +67,7 @@ body {
 .header__arrowback {
   margin-right: 0.5em;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 500px) {
   .header__arrowback {
     display: none;
   }
@@ -96,7 +96,7 @@ body {
     padding: 1.2em 1.2em;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 500px) {
   .explain__heading {
     display: flex;
     justify-content: center;
@@ -129,9 +129,14 @@ body {
     margin-left: -2.2em;
   }
 }
+@media all and (min-width: 720px) and (max-width: 1023px) {
+  .functionnement__num {
+    margin-left: -8.3em;
+  }
+}
 @media screen and (min-width: 1024px) {
   .functionnement__num {
-    margin-left: -7.3em;
+    margin-left: -4.1em;
   }
 }
 
@@ -143,9 +148,14 @@ body {
     margin-left: -3em;
   }
 }
+@media all and (min-width: 720px) and (max-width: 1023px) {
+  .functionnement__num2 {
+    margin-left: -9.3em;
+  }
+}
 @media screen and (min-width: 1024px) {
   .functionnement__num2 {
-    margin-left: -8.2em;
+    margin-left: -5.2em;
   }
 }
 
@@ -175,7 +185,7 @@ body {
     padding: 1.2em 1.2em;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 500px) {
   .describe__heading {
     display: flex;
     justify-content: center;
@@ -365,7 +375,7 @@ body {
   position: relative;
   top: 1em;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 500px) {
   .restnames__hicon--position {
     left: 1em;
   }
@@ -375,7 +385,7 @@ body {
   position: relative;
   top: 1em;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 500px) {
   .restnames__hiconfull--position {
     left: 1em;
   }
@@ -400,7 +410,7 @@ a {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 500px) {
   .restmenu__mainheading {
     margin: auto;
   }
@@ -469,6 +479,21 @@ a {
 .restmenu__dishes1:hover:hover .restemenu__dishes__entitled, .restmenu__dishes2:hover:hover .restemenu__dishes__entitled, .restmenu__dishes3:hover:hover .restemenu__dishes__entitled {
   transition: width linear;
   width: 83%;
+}
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .restmenu__dishes1:hover:hover .restemenu__dishes__entitled, .restmenu__dishes2:hover:hover .restemenu__dishes__entitled, .restmenu__dishes3:hover:hover .restemenu__dishes__entitled {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 380px) {
+  .restmenu__dishes1:hover:hover .restemenu__dishes__entitled, .restmenu__dishes2:hover:hover .restemenu__dishes__entitled, .restmenu__dishes3:hover:hover .restemenu__dishes__entitled {
+    width: 87%;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .restmenu__dishes1:hover:hover .entitled2, .restmenu__dishes2:hover:hover .entitled2, .restmenu__dishes3:hover:hover .entitled2 {
+    width: 70%;
+  }
 }
 
 .restmenu__dishes1 {
@@ -553,11 +578,6 @@ a {
   text-overflow: ellipsis;
   width: 100%;
   height: 100%;
-  /*@media screen and (max-width: 320px) and (max-width: 374px){
-      &:hover{
-          width: 60%;
-      }
-  }*/
 }
 
 #checking {
@@ -575,126 +595,22 @@ a {
 }
 @media screen and (max-width: 320px) {
   #checking {
-    left: 110px;
-  }
-  @-webkit-keyframes checking_sliding {
-    0% {
-      left: 220px;
-      opacity: 1;
-    }
-    100% {
-      left: 220px;
-      opacity: 1;
-    }
-  }
-  @keyframes checking_sliding {
-    0% {
-      left: 220px;
-      opacity: 1;
-    }
-    100% {
-      left: 220px;
-      opacity: 1;
-    }
+    left: 283px;
   }
 }
 @media screen and (min-width: 321px) and (max-width: 374px) {
   #checking {
-    left: 125px;
-  }
-  @-webkit-keyframes checking_sliding {
-    0% {
-      left: 252px;
-      opacity: 1;
-    }
-    100% {
-      left: 252px;
-      opacity: 1;
-    }
-  }
-  @keyframes checking_sliding {
-    0% {
-      left: 252px;
-      opacity: 1;
-    }
-    100% {
-      left: 252px;
-      opacity: 1;
-    }
+    left: 315px;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 720px) {
+@media screen and (min-width: 400px) and (max-width: 719px) {
   #checking {
-    left: 150px;
-    right: 150px;
-  }
-  @-webkit-keyframes checking_sliding {
-    0% {
-      left: 306px;
-      opacity: 1;
-    }
-    100% {
-      left: 306px;
-      opacity: 1;
-    }
-  }
-  @keyframes checking_sliding {
-    0% {
-      left: 306px;
-      opacity: 1;
-    }
-    100% {
-      left: 306px;
-      opacity: 1;
-    }
+    left: 368px;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 719px) {
   #checking {
-    left: 210px;
-    right: 210px;
-  }
-  @-webkit-keyframes checking_sliding {
-    0% {
-      left: 390px;
-      opacity: 1;
-    }
-    100% {
-      left: 390px;
-      opacity: 1;
-    }
-  }
-  @keyframes checking_sliding {
-    0% {
-      left: 390px;
-      opacity: 1;
-    }
-    100% {
-      left: 390px;
-      opacity: 1;
-    }
-  }
-}
-@media screen and (min-width: 1580px) {
-  @-webkit-keyframes checking_sliding {
-    0% {
-      left: 389px;
-      opacity: 1;
-    }
-    100% {
-      left: 389px;
-      opacity: 1;
-    }
-  }
-  @keyframes checking_sliding {
-    0% {
-      left: 389px;
-      opacity: 1;
-    }
-    100% {
-      left: 389px;
-      opacity: 1;
-    }
+    left: 455px;
   }
 }
 
@@ -838,7 +754,7 @@ a {
     font-weight: bold;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .functionnement__btn {
     width: 30%;
     margin: 1em auto;

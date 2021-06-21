@@ -186,7 +186,7 @@
 }
 
 @mixin functionnement__btn_L{
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1440px){
         width: 30%;
         margin: 1em auto; 
         font-size: 25px;
@@ -202,7 +202,7 @@
         margin: 0;
         padding: 1.2em 1.2em;
     }
-    @media screen and (min-width:720px){
+    @media screen and (min-width:500px){
         display: flex;
         justify-content: center;
         font-size: 30px;
@@ -227,70 +227,16 @@
 
 @mixin checking__sliders{
     @media screen and (max-width: 320px){
-        left: 110px;
-        @keyframes checking_sliding{
-            0%{
-                left: 220px;
-                opacity: 1;
-            }
-            100%{
-                left: 220px;
-                opacity: 1;
-            }
-        }
+        left: 283px;
     }
     @media screen and (min-width: 321px) and (max-width: 374px){
-        left: 125px;
-        @keyframes checking_sliding{
-            0%{
-                left: 252px;
-                opacity: 1;
-            }
-            100%{
-                left: 252px;
-                opacity: 1;
-            }   
-        }
+        left: 315px;
     }
     
-    @media screen and (min-width: 400px) and (max-width:720px){
-        left: 150px;
-        right: 150px;
-        @keyframes checking_sliding{
-            0%{
-                left: 306px;
-                opacity: 1;
-            }
-            100%{
-                left: 306px;
-                opacity: 1;
-            }
-        }
+    @media screen and (min-width: 400px) and (max-width:719px){
+        left: 368px;
     }
-    @media screen and (min-width:720px){
-        left: 210px;
-        right: 210px;
-        @keyframes checking_sliding{
-            0%{
-                left: 390px;
-                opacity: 1;
-            }
-            100%{
-                left: 390px;
-                opacity: 1;
-            }
-        }
-    }
-    @media screen and (min-width: 1580px){
-        @keyframes checking_sliding{
-            0%{
-                left: 389px;
-                opacity: 1;
-            }
-            100%{
-                left: 389px;
-                opacity: 1;
-            }
-        }
+    @media screen and (min-width:719px){
+        left:455px;
     }
 }

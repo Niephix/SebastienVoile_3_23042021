@@ -9,7 +9,7 @@ body{
 
 .header__arrowback{
     margin-right: 0.5em;
-    @media screen and (min-width:720px){
+    @media screen and (min-width:500px){
         display: none;
     }
     & .fas{
@@ -50,9 +50,13 @@ body{
     @media all and (min-width: 320px) and (max-width:374px){
         margin-left: -2.2em;
     }
-    @media screen and (min-width: 1024px){
-        margin-left: -7.3em;
+    @media all and (min-width: 720px) and (max-width:1023px){
+        margin-left: -8.3em;
     }
+    @media screen and (min-width: 1024px){
+        margin-left: -4.1em;
+    }
+
 }
 
 .functionnement__num2{
@@ -60,8 +64,11 @@ body{
     @media all and (min-width: 320px) and (max-width:374px){
         margin-left: -3em;
     }
+    @media all and (min-width: 720px) and (max-width:1023px){
+        margin-left: -9.3em;
+    }
     @media screen and (min-width: 1024px){
-        margin-left: -8.2em;
+        margin-left: -5.2em;
     }
 }
 
@@ -153,7 +160,7 @@ body{
 .restnames__hicon--position{
     position: relative;
     top: 1em;
-    @media screen and (min-width: 720px){
+    @media screen and (min-width: 500px){
         left: 1em;
     }
 }
@@ -161,7 +168,7 @@ body{
 .restnames__hiconfull--position{
     position: relative;
     top: 1em;
-    @media screen and (min-width: 720px){
+    @media screen and (min-width: 500px){
        left: 1em;
     }
 }
@@ -183,7 +190,7 @@ a{
         @media screen and (max-width:320px){
             font-size: 20px;
         }
-        @media screen and (min-width: 720px){
+        @media screen and (min-width: 500px){
            margin: auto;
         }
     }
@@ -230,6 +237,17 @@ a{
             &:hover .restemenu__dishes__entitled{
                 transition: width linear;
                 width: 83%;
+                @media all and (min-width: 320px) and (max-width:374px){
+                    width: 85%;
+                }
+                @media screen and (min-width:380px){
+                    width: 87%;
+                }
+            }
+            &:hover .entitled2{
+                @media all and (min-width: 320px) and (max-width:374px){
+                    width: 70%;
+                }
             }
         }   
     }
@@ -303,12 +321,7 @@ a{
         overflow: hidden;
         text-overflow: ellipsis;
         width: 100%;
-        height: 100%;
-            /*@media screen and (max-width: 320px) and (max-width: 374px){
-                &:hover{
-                    width: 60%;
-                }
-            }*/              
+        height: 100%;           
     }
     
     #checking{
