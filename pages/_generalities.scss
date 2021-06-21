@@ -244,9 +244,9 @@ a{
                     width: 87%;
                 }
             }
-            &:hover .entitled2{
+            &:hover .entitled2, &:hover .entitled1{
                 @media all and (min-width: 320px) and (max-width:374px){
-                    width: 70%;
+                    width: 65%;
                 }
             }
         }   
@@ -361,7 +361,6 @@ a{
     }
 
     .entitled2{
-        width: 70%;
         margin: 0 0 1em 1em;
         white-space: nowrap;
         overflow:hidden;
