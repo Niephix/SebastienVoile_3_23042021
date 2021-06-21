@@ -357,7 +357,8 @@ a{
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        @include restmenu__desc;    
+        width: 200px;
+        /*@include restmenu_name;*/
     }
 
     .entitled2{
@@ -365,7 +366,8 @@ a{
         white-space: nowrap;
         overflow:hidden;
         text-overflow: ellipsis;
-        @include restmenu__text;
+        width: 200px;
+        /*@include restmenu__text;*/
     }
     
     .price{
