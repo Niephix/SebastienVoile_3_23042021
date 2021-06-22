@@ -482,17 +482,17 @@ a {
     width: 450px;
   }
 }
-.restmenu__dishes1:hover:hover #checking,
-.restmenu__dishes2:hover:hover #checking,
-.restmenu__dishes3:hover:hover #checking {
+.restmenu__dishes1:hover:hover .checking,
+.restmenu__dishes2:hover:hover .checking,
+.restmenu__dishes3:hover:hover .checking {
   transition: all 0.4s linear;
   transform: translateX(-63px);
   opacity: 1;
 }
 @media screen and (max-width: 320px) {
-  .restmenu__dishes1:hover:hover #checking,
-.restmenu__dishes2:hover:hover #checking,
-.restmenu__dishes3:hover:hover #checking {
+  .restmenu__dishes1:hover:hover .checking,
+.restmenu__dishes2:hover:hover .checking,
+.restmenu__dishes3:hover:hover .checking {
     transform: translateX(-55px);
   }
 }
@@ -624,7 +624,7 @@ a {
   height: 100%;
 }
 
-#checking {
+.checking {
   position: relative;
   top: -4.4em;
   left: 330px;
@@ -638,22 +638,22 @@ a {
   background: #99e2d0;
 }
 @media screen and (max-width: 320px) {
-  #checking {
+  .checking {
     left: 283px;
   }
 }
 @media screen and (min-width: 321px) and (max-width: 374px) {
-  #checking {
+  .checking {
     left: 315px;
   }
 }
 @media screen and (min-width: 400px) and (max-width: 719px) {
-  #checking {
+  .checking {
     left: 368px;
   }
 }
 @media screen and (min-width: 719px) {
-  #checking {
+  .checking {
     left: 455px;
   }
 }
@@ -676,7 +676,6 @@ a {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 290px;
 }
 @media all and (min-width: 320px) and (max-width: 380px) {
   .entitled1 {
@@ -690,7 +689,6 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 250px;
 }
 @media all and (min-width: 320px) and (max-width: 375px) {
   .entitled2 {
@@ -714,12 +712,10 @@ a {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  background-image: fixed no-repeat top center;
   z-index: -3;
 }
 @media screen and (min-width: 720px) {
   .picture__menu {
-    background-position: center;
     width: 100%;
     height: 400px;
   }
@@ -753,7 +749,6 @@ a {
   .btn {
     width: 370px;
     font-size: 18px;
-    font-weight: bold;
   }
 }
 .btn:hover {
@@ -774,7 +769,6 @@ a {
   .btn--command {
     width: 370px;
     font-size: 18px;
-    font-weight: bold;
   }
 }
 
@@ -802,7 +796,6 @@ a {
   .functionnement__btn {
     width: 370px;
     font-size: 18px;
-    font-weight: bold;
   }
 }
 @media screen and (min-width: 1440px) {
