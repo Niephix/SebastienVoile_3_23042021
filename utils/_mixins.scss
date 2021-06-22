@@ -219,10 +219,6 @@
 }
 
 @mixin heading {
-    @media screen and (max-width: 320px) {
-        padding: 0;
-    }
-
     @media all and (min-width: 321px) and (max-width:374px) {
         margin: 0;
         padding: 1.2em 1.2em;

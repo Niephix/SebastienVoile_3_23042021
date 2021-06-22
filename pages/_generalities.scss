@@ -283,12 +283,15 @@ a {
             @media all and (min-width: 320px) and (max-width:375px) {
                 width: 160px;
             }
+            @media all and (min-width:380px) and (max-width:720px) {
+                width: 245px;
+            }
         }
     }
 }
 
 .restmenu__dishes1 {
-    animation: restmenus__articles_apparitions 1s linear backwards 1 normal;
+    animation: restmenus__articles_apparitions 1s 0.1s linear backwards 1 normal;
 }
 
 @keyframes restmenus__articles_apparitions {

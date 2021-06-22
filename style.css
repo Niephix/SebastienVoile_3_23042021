@@ -86,11 +86,6 @@ body {
 .explain__heading {
   margin: 1.2em 0.6em;
 }
-@media screen and (max-width: 320px) {
-  .explain__heading {
-    padding: 0;
-  }
-}
 @media all and (min-width: 321px) and (max-width: 374px) {
   .explain__heading {
     margin: 0;
@@ -175,11 +170,6 @@ body {
 .describe__heading {
   margin: 0;
   padding: 2em 0.6em 1em 0.6em;
-}
-@media screen and (max-width: 320px) {
-  .describe__heading {
-    padding: 0;
-  }
 }
 @media all and (min-width: 321px) and (max-width: 374px) {
   .describe__heading {
@@ -539,10 +529,19 @@ a {
     width: 160px;
   }
 }
+@media all and (min-width: 380px) and (max-width: 720px) {
+  .restmenu__dishes1:hover:hover .entitled1, .restmenu__dishes1:hover:hover .entitled2,
+.restmenu__dishes2:hover:hover .entitled1,
+.restmenu__dishes2:hover:hover .entitled2,
+.restmenu__dishes3:hover:hover .entitled1,
+.restmenu__dishes3:hover:hover .entitled2 {
+    width: 245px;
+  }
+}
 
 .restmenu__dishes1 {
-  -webkit-animation: restmenus__articles_apparitions 1s linear backwards 1 normal;
-          animation: restmenus__articles_apparitions 1s linear backwards 1 normal;
+  -webkit-animation: restmenus__articles_apparitions 1s 0.1s linear backwards 1 normal;
+          animation: restmenus__articles_apparitions 1s 0.1s linear backwards 1 normal;
 }
 
 @-webkit-keyframes restmenus__articles_apparitions {
