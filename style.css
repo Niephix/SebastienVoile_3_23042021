@@ -639,12 +639,12 @@ a {
 }
 @media all and (min-width: 380px) and (max-width: 390px) {
   .checking {
-    left: 335px;
+    left: 340px;
   }
 }
 @media all and (min-width: 390px) and (max-width: 395px) {
   .checking {
-    left: 346px;
+    left: 350px;
   }
 }
 @media screen and (min-width: 396px) and (max-width: 719px) {
