@@ -34,7 +34,7 @@
       opacity: 1;
       color: $color-primary;
       transform-origin: center;
-      animation: rotation__utensils 2s 0.2s ease-in-out both infinite alternate-reverse;
+      animation: rotation__utensils 2.5s 0.2s ease-in-out both infinite alternate-reverse;
   }
   @keyframes rotation__utensils{
       0%{

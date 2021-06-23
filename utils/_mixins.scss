@@ -181,7 +181,7 @@
 
 @mixin restmenu__dishes {
 
-    @media all and (min-width: 376px) and (max-width:719px) {
+    @media all and (min-width: 396px) and (max-width:719px) {
         width: 363px;
     }
 
@@ -249,14 +249,18 @@
 
 @mixin checking__sliders {
     @media screen and (max-width: 320px) {
-        left: 283px;
+        left: 290px;
+    }
+
+   @media all and (min-width: 380px) and (max-width:396px){
+        left: 345px;
     }
 
     @media screen and (min-width: 321px) and (max-width: 374px) {
         left: 315px;
     }
 
-    @media screen and (min-width: 400px) and (max-width:719px) {
+    @media screen and (min-width: 396px) and (max-width:719px) {
         left: 368px;
     }
 
