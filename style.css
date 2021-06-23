@@ -639,20 +639,20 @@ a {
 }
 @media all and (min-width: 380px) and (max-width: 390px) {
   .checking {
-    left: 345px;
+    left: 335px;
   }
 }
-@media all and (min-width: 391px) and (max-width: 395px) {
+@media all and (min-width: 390px) and (max-width: 395px) {
   .checking {
-    left: 349px;
+    left: 346px;
   }
 }
 @media screen and (min-width: 396px) and (max-width: 719px) {
   .checking {
-    left: 368px;
+    left: 367px;
   }
 }
-@media screen and (min-width: 719px) {
+@media screen and (min-width: 720px) {
   .checking {
     left: 455px;
   }
