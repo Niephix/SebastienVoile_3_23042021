@@ -410,9 +410,6 @@ a {
   background-color: #f0f1f3;
 }
 
-.restmenu__mainheading {
-  /*margin: 0 .3em;*/
-}
 @media screen and (max-width: 320px) {
   .restmenu__mainheading {
     font-size: 20px;
@@ -534,8 +531,8 @@ a {
 }
 
 .restmenu__dishes1 {
-  -webkit-animation: restmenus__articles_apparitions 1s 0.1s linear backwards 1 normal;
-          animation: restmenus__articles_apparitions 1s 0.1s linear backwards 1 normal;
+  -webkit-animation: restmenus__articles_apparitions 1s 0.25s linear backwards 1 normal;
+          animation: restmenus__articles_apparitions 1s 0.25s linear backwards 1 normal;
 }
 
 @-webkit-keyframes restmenus__articles_apparitions {
@@ -572,8 +569,8 @@ a {
   }
 }
 .restmenu__dishes2 {
-  -webkit-animation: restmenus__articles_apparitions 1s 0.3s ease-out backwards 1 normal;
-          animation: restmenus__articles_apparitions 1s 0.3s ease-out backwards 1 normal;
+  -webkit-animation: restmenus__articles_apparitions 1s 0.4s ease-out backwards 1 normal;
+          animation: restmenus__articles_apparitions 1s 0.4s ease-out backwards 1 normal;
 }
 
 @keyframes restmenus__articles_apparitions {
@@ -590,8 +587,8 @@ a {
   }
 }
 .restmenu__dishes3 {
-  -webkit-animation: restmenus__articles_apparitions 1s 0.5s linear backwards 1 normal;
-          animation: restmenus__articles_apparitions 1s 0.5s linear backwards 1 normal;
+  -webkit-animation: restmenus__articles_apparitions 1s 0.6s linear backwards 1 normal;
+          animation: restmenus__articles_apparitions 1s 0.6s linear backwards 1 normal;
 }
 
 @keyframes restmenus__articles_apparitions {
@@ -635,14 +632,19 @@ a {
     left: 290px;
   }
 }
-@media all and (min-width: 380px) and (max-width: 396px) {
+@media screen and (min-width: 321px) and (max-width: 374px) {
+  .checking {
+    left: 315px;
+  }
+}
+@media all and (min-width: 380px) and (max-width: 390px) {
   .checking {
     left: 345px;
   }
 }
-@media screen and (min-width: 321px) and (max-width: 374px) {
+@media all and (min-width: 391px) and (max-width: 395px) {
   .checking {
-    left: 315px;
+    left: 349px;
   }
 }
 @media screen and (min-width: 396px) and (max-width: 719px) {
@@ -855,7 +857,7 @@ a {
   opacity: 1;
   color: #9356dc;
   transform-origin: center;
-  animation: rotation__utensils 2.5s 0.2s ease-in-out both infinite alternate-reverse;
+  animation: rotation__utensils 2s 0.2s ease-in-out both infinite alternate-reverse;
 }
 @-webkit-keyframes rotation__utensils {
   0% {
@@ -891,7 +893,7 @@ a {
   position: absolute;
   font-size: 45px;
   color: #ff79da;
-  animation: logo__spinner 2s ease-in-out infinite alternate-reverse;
+  animation: logo__spinner 1.5s ease-in-out infinite alternate-reverse;
 }
 @-webkit-keyframes logo__spinner {
   0% {

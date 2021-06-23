@@ -252,13 +252,18 @@
         left: 290px;
     }
 
-   @media all and (min-width: 380px) and (max-width:396px){
-        left: 345px;
-    }
-
     @media screen and (min-width: 321px) and (max-width: 374px) {
         left: 315px;
     }
+
+    @media all and (min-width: 380px) and (max-width:390px) {
+        left: 345px;
+    }
+
+    @media all and (min-width: 391px) and (max-width:395px) {
+        left: 349px;
+    }
+    
 
     @media screen and (min-width: 396px) and (max-width:719px) {
         left: 368px;
