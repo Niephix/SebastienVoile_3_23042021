@@ -630,12 +630,22 @@ a {
   border-radius: 0 20px 20px 0;
   background: #99e2d0;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 335px) {
   .checking {
     left: 290px;
   }
 }
-@media screen and (min-width: 321px) and (max-width: 374px) {
+@media screen and (min-width: 336px) and (max-width: 345px) {
+  .checking {
+    left: 300px;
+  }
+}
+@media screen and (min-width: 346px) and (max-width: 350px) {
+  .checking {
+    left: 310px;
+  }
+}
+@media screen and (min-width: 351px) and (max-width: 360px) {
   .checking {
     left: 315px;
   }

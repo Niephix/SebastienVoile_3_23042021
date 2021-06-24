@@ -202,9 +202,10 @@
         font-size: 14px;
         width: 200px;
     }
-    @media all and (min-width: 375px) and (max-width:400px){
+
+    @media all and (min-width: 375px) and (max-width:400px) {
         width: 260px;
-    }  
+    }
 }
 
 @mixin placeholder_large {
@@ -251,11 +252,19 @@
 }
 
 @mixin checking__sliders {
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 335px) {
         left: 290px;
     }
 
-    @media screen and (min-width: 321px) and (max-width: 374px) {
+    @media screen and (min-width: 336px) and (max-width: 345px) {
+        left: 300px;
+    }
+
+    @media screen and (min-width: 346px) and (max-width: 350px) {
+        left: 310px;
+    }
+
+    @media screen and (min-width: 351px) and (max-width: 360px) {
         left: 315px;
     }
 
