@@ -202,6 +202,7 @@ a {
 }
 
 .restmenu__mainheading {
+    padding: 0 0.3em;
    
     @media screen and (max-width:320px) {
         font-size: 20px;
@@ -368,7 +369,7 @@ a {
     left: 330px;
     right: 0;
     width: 60px;
-    height: 70px;
+    height: 71px;
     opacity: 0;
     overflow: hidden;
     cursor: pointer;
@@ -380,13 +381,13 @@ a {
 .restmenu__check {
     color: $color-tertiary;
     position: absolute;
-    top: 1em;
-    left: .6em;
+    top: 1.6em;
+    left: 1.1em;
     background: white;
     border-radius: $circle;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 900;
-    padding: .5em .6em .5em .6em;
+    padding: .3em .4em .3em .4em;
     text-align: center;
 }
 
@@ -403,7 +404,6 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 260px;
     @include restmenu__text;
 }
 

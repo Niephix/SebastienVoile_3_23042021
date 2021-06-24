@@ -198,10 +198,13 @@
 }
 
 @mixin restmenu__text {
-    @media all and (min-width: 320px) and (max-width:375px) {
+    @media all and (min-width: 320px) and (max-width:374px) {
         font-size: 14px;
         width: 200px;
     }
+    @media all and (min-width: 375px) and (max-width:400px){
+        width: 260px;
+    }  
 }
 
 @mixin placeholder_large {

@@ -410,6 +410,9 @@ a {
   background-color: #f0f1f3;
 }
 
+.restmenu__mainheading {
+  padding: 0 0.3em;
+}
 @media screen and (max-width: 320px) {
   .restmenu__mainheading {
     font-size: 20px;
@@ -620,7 +623,7 @@ a {
   left: 330px;
   right: 0;
   width: 60px;
-  height: 70px;
+  height: 71px;
   opacity: 0;
   overflow: hidden;
   cursor: pointer;
@@ -661,13 +664,13 @@ a {
 .restmenu__check {
   color: #99e2d0;
   position: absolute;
-  top: 1em;
-  left: 0.6em;
+  top: 1.6em;
+  left: 1.1em;
   background: white;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 900;
-  padding: 0.5em 0.6em 0.5em 0.6em;
+  padding: 0.3em 0.4em 0.3em 0.4em;
   text-align: center;
 }
 
@@ -689,12 +692,16 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 260px;
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 320px) and (max-width: 374px) {
   .entitled2 {
     font-size: 14px;
     width: 200px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 400px) {
+  .entitled2 {
+    width: 260px;
   }
 }
 
